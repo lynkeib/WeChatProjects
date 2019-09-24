@@ -1,4 +1,4 @@
-from backend_ch1_sec1 import settings
+from backend import settings
 import yaml
 import os
 import utils.response

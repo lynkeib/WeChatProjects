@@ -5,9 +5,9 @@ import django
 import hashlib
 import logging
 
-from backend_ch1_sec1 import settings
+from backend import settings
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'backend_ch1_sec1.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'backend.settings')
 django.setup()
 
 from apis.models import App

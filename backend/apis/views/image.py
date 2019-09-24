@@ -1,4 +1,4 @@
-from backend_ch1_sec1 import settings
+from backend import settings
 import os
 from django.http import Http404, HttpResponse, FileResponse, JsonResponse
 from utils.response import ReturnCode
