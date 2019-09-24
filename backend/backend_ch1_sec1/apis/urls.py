@@ -13,4 +13,3 @@ urlpatterns = [
     path('constellation', service.constellation),
     path('joke', service.joke)
 ]
-e
