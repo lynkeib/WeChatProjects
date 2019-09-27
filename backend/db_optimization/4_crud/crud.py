@@ -99,26 +99,74 @@ from django.db.models import Value
 from django.db.models.functions import Concat
 
 
+# String Concatenation
 def contact_function():
     user = User.objects.filter(open_id='test_open_id').annotate(
         # open_id=(open_id), nickname=(nickname)
         screen_name=Concat(
             Value('open_id='),
             "open_id",
-            Value(","),
+            Value(", "),
             Value("nickname="),
             "nickname"
         )
-    )
-    pass
+    )[0]
+    print("screen_name=", user.screen_name)
+
+
+# String length
+from django.db.models.functions import Length
+
+
+def length_function():
+    user = User.objects.filter(open_id='test_open_id').annotate(
+        open_id_length=Length('open_id')
+    )[0]
+
+    print("open_id_length=", user.open_id_length)
+
+
+# Upper Lower Case Functions
+from django.db.models.functions import Upper, Lower
+
+
+def case_function():
+    user = User.objects.filter(open_id='test_open_id').annotate(
+        upper_open_id=Upper('open_id'),
+        lower_open_id=Lower('open_id')
+    )[0]
+    print(user.upper_open_id)
+    print(user.lower_open_id)
+
+
+# Date function
+# Now()
+from apis.models import App
+from django.db.models.functions import Now
+
+
+def now_function():
+    # applications published before a date
+    apps = App.objects.filter(publish_date__lte=Now())
+    for app in apps:
+        print(app)
+
+
+# time slice (day/week/month)
+# Trunc
+from django.db.models import Count
+from django.db.models.functions import Trunc
+
+
+def trunc_function():
+    # print the number of published app in each day
+    app_per_day = App.objects.annotate(
+        publish_day=Trunc('publish_date', 'month')
+    ).values('publish_day') \
+        .annotate(publish_num=Count('appid'))
+    for app in app_per_day:
+        print(app)
 
 
 if __name__ == '__main__':
-    # add_one()
-    # add_btch()
-    # get_one()
-    # get_filter()
-    # get_order()
-    # get_chain()
-
-    modify_one()
+    trunc_function()
