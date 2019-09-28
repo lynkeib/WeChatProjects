@@ -137,3 +137,12 @@ RESOURCES_DIR = os.path.join(BASE_DIR, 'resources')
 IMAGES_DIR = os.path.join(RESOURCES_DIR, 'images')
 WX_APP_SECRET = "5b3253fd26123740d2298a84d6cd5589"
 SESSION_COOKIE_AGE = 60 * 60 * 24
+
+
+LOGGING = {
+    # Format
+    'formatters': {
+        'format': '%(asctime)s [%{thredName}s: %(thread)d]'
+                '%(pathname)s: %(funcName)s: %(lineno)d %(levelname)s - %(message)s'
+    }
+}
