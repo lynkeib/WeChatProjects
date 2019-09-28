@@ -1,0 +1,5 @@
+2019-09-28 21:17:48,074 [MainThread: 4781032896]/Users/chengyinliu/WeChatProjects/backend/ops/logdemo.py:logdemo:11 INFO - hello logging
+2019-09-28 21:19:04,730 [MainThread: 4706653632]/Users/chengyinliu/WeChatProjects/backend/ops/logdemo.py:logdemo:11 INFO - hello logging
+2019-09-28 21:19:04,731 [MainThread: 4706653632]/Users/chengyinliu/WeChatProjects/backend/ops/logdemo.py:logdemo:12 DEBUG - hello debug log
+2019-09-28 21:19:27,495 [MainThread: 4699813312]/Users/chengyinliu/WeChatProjects/backend/ops/logdemo.py:logdemo:11 INFO - hello logging
+2019-09-28 21:19:27,496 [MainThread: 4699813312]/Users/chengyinliu/WeChatProjects/backend/ops/logdemo.py:logdemo:12 DEBUG - hello debug log

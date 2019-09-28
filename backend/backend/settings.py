@@ -138,11 +138,87 @@ IMAGES_DIR = os.path.join(RESOURCES_DIR, 'images')
 WX_APP_SECRET = "5b3253fd26123740d2298a84d6cd5589"
 SESSION_COOKIE_AGE = 60 * 60 * 24
 
+LOG_DIR = os.path.join(BASE_DIR, 'log')
+if not os.path.exists(LOG_DIR):
+    os.mkdir(LOG_DIR)
 
 LOGGING = {
+    'version': 1,
     # Format
     'formatters': {
-        'format': '%(asctime)s [%{thredName}s: %(thread)d]'
-                '%(pathname)s: %(funcName)s: %(lineno)d %(levelname)s - %(message)s'
+        'standard': {
+            'format': '%(asctime)s [%(threadName)s: %(thread)d]'
+                      '%(pathname)s:%(funcName)s:%(lineno)d %(levelname)s - %(message)s'
+        }
+    },
+    'filters': {
+        'test': {
+            '()': 'ops.TestFilter'
+        }
+    },
+    'handlers':{
+        'console_handler': {
+            'level': 'INFO',
+            'class': 'logging.StreamHandler',
+            'formatter': 'standard'
+        },
+        'file_handler': {
+            'level': 'DEBUG',
+            'class': 'logging.handlers.RotatingFileHandler',
+            'filename': os.path.join(LOG_DIR, 'backend.log'),
+            'maxBytes': 1024*1024*1024,
+            'backupCount': 5,
+            'formatter': 'standard',
+            'encoding': 'utf-8'
+        }
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['console_handler', 'file_handler'],
+            'filters': ['test'],
+            'level': 'DEBUG'
+        }
     }
 }
+#
+# LOGGING = {
+#     'version': 1,
+#     # 日志格式
+#     'formatters': {
+#         'standard': {
+#             'format': '%(asctime)s [%(threadName)s: %(thread)d]'
+#                       '%(pathname)s:%(funcName)s:%(lineno)d %(levelname)s - %(message)s'
+#         }
+#     },
+#
+#     'filters': {
+#         'test': {
+#             '()': 'ops.TestFilter'
+#         }
+#     },
+#
+#     'handlers':{
+#         'console_handler': {
+#             'level': 'INFO',
+#             'class': 'logging.StreamHandler',
+#             'formatter': 'standard'
+#         },
+#         'file_handler': {
+#             'level': 'DEBUG',
+#             'class': 'logging.handlers.RotatingFileHandler',
+#             'filename': os.path.join(LOG_DIR, 'backend.log'),
+#             'maxBytes': 1024*1024*1024,
+#             'backupCount': 5,
+#             'formatter': 'standard',
+#             'encoding': 'utf-8'
+#         }
+#     },
+#
+#     'loggers': {
+#         'django': {
+#             'handlers': ['console_handler', 'file_handler'],
+#             'filters': ['test'],
+#             'level': 'DEBUG'
+#         }
+#     }
+# }
