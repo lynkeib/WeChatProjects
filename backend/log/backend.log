@@ -3730,3 +3730,1656 @@ Traceback (most recent call last):
 django.template.base.VariableDoesNotExist: Failed lookup for key [is_popup] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x1126461e0>>, 'request': <WSGIRequest: GET '/admin/'>, 'user': <SimpleLazyObject: <User: chengyinliu>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x1126b6978>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x1126ce6a0>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'site_title': 'Django site admin', 'site_header': 'Django administration', 'site_url': '/', 'has_permission': True, 'available_apps': [{'name': 'Apis', 'app_label': 'apis', 'app_url': '/admin/apis/', 'has_module_perms': True, 'models': [{'name': 'Apps', 'object_name': 'App', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/apis/app/', 'add_url': '/admin/apis/app/add/'}]}, {'name': 'Authentication and Authorization', 'app_label': 'auth', 'app_url': '/admin/auth/', 'has_module_perms': True, 'models': [{'name': 'Groups', 'object_name': 'Group', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/auth/group/', 'add_url': '/admin/auth/group/add/'}, {'name': 'Users', 'object_name': 'User', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/auth/user/', 'add_url': '/admin/auth/user/add/'}]}, {'name': 'Authorization', 'app_label': 'authorization', 'app_url': '/admin/authorization/', 'has_module_perms': True, 'models': [{'name': 'Users', 'object_name': 'User', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/authorization/user/', 'add_url': '/admin/authorization/user/add/'}]}], 'title': 'Site administration', 'app_list': [{'name': 'Apis', 'app_label': 'apis', 'app_url': '/admin/apis/', 'has_module_perms': True, 'models': [{'name': 'Apps', 'object_name': 'App', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/apis/app/', 'add_url': '/admin/apis/app/add/'}]}, {'name': 'Authentication and Authorization', 'app_label': 'auth', 'app_url': '/admin/auth/', 'has_module_perms': True, 'models': [{'name': 'Groups', 'object_name': 'Group', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/auth/group/', 'add_url': '/admin/auth/group/add/'}, {'name': 'Users', 'object_name': 'User', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/auth/user/', 'add_url': '/admin/auth/user/add/'}]}, {'name': 'Authorization', 'app_label': 'authorization', 'app_url': '/admin/authorization/', 'has_module_perms': True, 'models': [{'name': 'Users', 'object_name': 'User', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/authorization/user/', 'add_url': '/admin/authorization/user/add/'}]}], 'LANGUAGE_CODE': 'en-us', 'LANGUAGE_BIDI': False}]
 2019-09-29 18:03:00,304 [Thread-9: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.001) SELECT `django_admin_log`.`id`, `django_admin_log`.`action_time`, `django_admin_log`.`user_id`, `django_admin_log`.`content_type_id`, `django_admin_log`.`object_id`, `django_admin_log`.`object_repr`, `django_admin_log`.`action_flag`, `django_admin_log`.`change_message`, `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined`, `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_admin_log` INNER JOIN `auth_user` ON (`django_admin_log`.`user_id` = `auth_user`.`id`) LEFT OUTER JOIN `django_content_type` ON (`django_admin_log`.`content_type_id` = `django_content_type`.`id`) WHERE `django_admin_log`.`user_id` = 1 ORDER BY `django_admin_log`.`action_time` DESC LIMIT 10; args=(1,)
 2019-09-29 18:03:00,305 [Thread-9: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/core/servers/basehttp.py:log_message:124 INFO - "GET /admin/ HTTP/1.1" 200 4284
+2019-09-29 18:03:18,948 [Thread-10: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.017) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-09-29 18:03:19,098 [Thread-10: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.003) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2019-09-29 18:03:19,116 [Thread-10: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.004) SELECT VERSION(); args=None
+2019-09-29 18:03:19,178 [Thread-10: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.013) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2019-09-29 18:03:19,413 [Thread-11: 123145514762240]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.032) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-09-29 18:03:19,445 [Thread-11: 123145514762240]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.016) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2019-09-29 18:03:19,462 [Thread-11: 123145514762240]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.013) SELECT VERSION(); args=None
+2019-09-29 18:03:19,664 [Thread-10: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.471) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2019-09-29 18:03:18.613922' AND `django_session`.`session_key` = '5pkv6zv5vmpdcsufdo95sb4oabr956n1'); args=('2019-09-29 18:03:18.613922', '5pkv6zv5vmpdcsufdo95sb4oabr956n1')
+2019-09-29 18:03:19,830 [Thread-11: 123145514762240]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.013) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2019-09-29 18:03:19,848 [Thread-11: 123145514762240]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.016) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2019-09-29 18:03:18.831093' AND `django_session`.`session_key` = '5pkv6zv5vmpdcsufdo95sb4oabr956n1'); args=('2019-09-29 18:03:18.831093', '5pkv6zv5vmpdcsufdo95sb4oabr956n1')
+2019-09-29 18:03:19,916 [Thread-10: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.083) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2019-09-29 18:03:20,116 [Thread-11: 123145514762240]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.165) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2019-09-29 18:03:20,202 [Thread-10: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.051) SELECT COUNT(*) AS `__count` FROM `apis_app`; args=()
+2019-09-29 18:03:20,283 [Thread-10: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.016) SELECT COUNT(*) AS `__count` FROM `apis_app`; args=()
+2019-09-29 18:03:20,352 [Thread-11: 123145514762240]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/core/servers/basehttp.py:log_message:124 INFO - "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+2019-09-29 18:03:20,634 [Thread-10: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.015) SELECT `apis_app`.`appid`, `apis_app`.`category`, `apis_app`.`application`, `apis_app`.`name`, `apis_app`.`publish_date`, `apis_app`.`url`, `apis_app`.`desc` FROM `apis_app` ORDER BY `apis_app`.`appid` DESC; args=()
+2019-09-29 18:03:22,341 [Thread-10: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py:_resolve_lookup:878 DEBUG - Exception while resolving variable 'errors' in template 'admin/change_list.html'.
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'NoneType' object has no attribute 'errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [errors] in None
+2019-09-29 18:03:23,160 [Thread-10: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py:_resolve_lookup:878 DEBUG - Exception while resolving variable 'show' in template 'admin/change_list.html'.
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    current = current[bit]
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'show'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 841, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'show'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'show'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [show] in [{'True': True, 'False': False, 'None': None, 'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x1123e28c8>>}]
+2019-09-29 18:03:23,178 [Thread-10: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py:_resolve_lookup:878 DEBUG - Exception while resolving variable 'is_multipart' in template 'admin/change_list.html'.
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'NoneType' object has no attribute 'is_multipart'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'is_multipart'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [is_multipart] in None
+2019-09-29 18:03:24,956 [Thread-10: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py:_resolve_lookup:878 DEBUG - Exception while resolving variable 'non_field_errors' in template 'admin/change_list.html'.
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'NoneType' object has no attribute 'non_field_errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'non_field_errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [non_field_errors] in None
+2019-09-29 18:03:24,959 [Thread-10: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py:_resolve_lookup:878 DEBUG - Exception while resolving variable 'non_field_errors' in template 'admin/change_list.html'.
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'NoneType' object has no attribute 'non_field_errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'non_field_errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [non_field_errors] in None
+2019-09-29 18:03:24,961 [Thread-10: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py:_resolve_lookup:878 DEBUG - Exception while resolving variable 'non_field_errors' in template 'admin/change_list.html'.
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'NoneType' object has no attribute 'non_field_errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'non_field_errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [non_field_errors] in None
+2019-09-29 18:03:24,976 [Thread-10: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py:_resolve_lookup:878 DEBUG - Exception while resolving variable 'non_field_errors' in template 'admin/change_list.html'.
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'NoneType' object has no attribute 'non_field_errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'non_field_errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [non_field_errors] in None
+2019-09-29 18:03:24,980 [Thread-10: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py:_resolve_lookup:878 DEBUG - Exception while resolving variable 'non_field_errors' in template 'admin/change_list.html'.
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'NoneType' object has no attribute 'non_field_errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'non_field_errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [non_field_errors] in None
+2019-09-29 18:03:25,003 [Thread-10: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/core/servers/basehttp.py:log_message:124 INFO - "GET /admin/apis/app/ HTTP/1.1" 200 5568
+2019-09-29 18:03:27,342 [Thread-12: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-09-29 18:03:27,344 [Thread-12: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.001) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2019-09-29 18:03:27,345 [Thread-13: 123145514762240]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-09-29 18:03:27,347 [Thread-12: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.002) SELECT VERSION(); args=None
+2019-09-29 18:03:27,355 [Thread-13: 123145514762240]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.001) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2019-09-29 18:03:27,357 [Thread-13: 123145514762240]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.001) SELECT VERSION(); args=None
+2019-09-29 18:03:27,361 [Thread-12: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.001) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2019-09-29 18:03:27,364 [Thread-12: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.002) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2019-09-29 18:03:27.331992' AND `django_session`.`session_key` = '5pkv6zv5vmpdcsufdo95sb4oabr956n1'); args=('2019-09-29 18:03:27.331992', '5pkv6zv5vmpdcsufdo95sb4oabr956n1')
+2019-09-29 18:03:27,373 [Thread-12: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.002) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2019-09-29 18:03:27,391 [Thread-13: 123145514762240]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.014) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2019-09-29 18:03:27,393 [Thread-12: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.015) SELECT `apis_app`.`appid`, `apis_app`.`category`, `apis_app`.`application`, `apis_app`.`name`, `apis_app`.`publish_date`, `apis_app`.`url`, `apis_app`.`desc` FROM `apis_app` WHERE `apis_app`.`appid` = 'f18ba49825b634f44e8cdfb694ecaa13'; args=('f18ba49825b634f44e8cdfb694ecaa13',)
+2019-09-29 18:03:27,405 [Thread-13: 123145514762240]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.013) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2019-09-29 18:03:27.338501' AND `django_session`.`session_key` = '5pkv6zv5vmpdcsufdo95sb4oabr956n1'); args=('2019-09-29 18:03:27.338501', '5pkv6zv5vmpdcsufdo95sb4oabr956n1')
+2019-09-29 18:03:27,420 [Thread-13: 123145514762240]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.002) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2019-09-29 18:03:27,427 [Thread-13: 123145514762240]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/core/servers/basehttp.py:log_message:124 INFO - "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+2019-09-29 18:03:27,645 [Thread-12: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/core/servers/basehttp.py:log_message:124 INFO - "GET /admin/apis/app/f18ba49825b634f44e8cdfb694ecaa13/change/ HTTP/1.1" 200 7027
+2019-09-29 18:03:34,044 [Thread-14: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-09-29 18:03:34,045 [Thread-14: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.001) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2019-09-29 18:03:34,046 [Thread-15: 123145514762240]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-09-29 18:03:34,046 [Thread-14: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SELECT VERSION(); args=None
+2019-09-29 18:03:34,047 [Thread-15: 123145514762240]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2019-09-29 18:03:34,049 [Thread-15: 123145514762240]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SELECT VERSION(); args=None
+2019-09-29 18:03:34,051 [Thread-14: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2019-09-29 18:03:34,053 [Thread-14: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.001) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2019-09-29 18:03:34.037777' AND `django_session`.`session_key` = '5pkv6zv5vmpdcsufdo95sb4oabr956n1'); args=('2019-09-29 18:03:34.037777', '5pkv6zv5vmpdcsufdo95sb4oabr956n1')
+2019-09-29 18:03:34,056 [Thread-15: 123145514762240]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.003) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2019-09-29 18:03:34,057 [Thread-14: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.001) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2019-09-29 18:03:34,060 [Thread-15: 123145514762240]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.003) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2019-09-29 18:03:34.041292' AND `django_session`.`session_key` = '5pkv6zv5vmpdcsufdo95sb4oabr956n1'); args=('2019-09-29 18:03:34.041292', '5pkv6zv5vmpdcsufdo95sb4oabr956n1')
+2019-09-29 18:03:34,060 [Thread-14: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.001) SELECT COUNT(*) AS `__count` FROM `apis_app`; args=()
+2019-09-29 18:03:34,065 [Thread-15: 123145514762240]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.002) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2019-09-29 18:03:34,068 [Thread-14: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.003) SELECT COUNT(*) AS `__count` FROM `apis_app`; args=()
+2019-09-29 18:03:34,075 [Thread-15: 123145514762240]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/core/servers/basehttp.py:log_message:124 INFO - "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+2019-09-29 18:03:34,075 [Thread-14: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.001) SELECT `apis_app`.`appid`, `apis_app`.`category`, `apis_app`.`application`, `apis_app`.`name`, `apis_app`.`publish_date`, `apis_app`.`url`, `apis_app`.`desc` FROM `apis_app` ORDER BY `apis_app`.`appid` DESC; args=()
+2019-09-29 18:03:34,113 [Thread-14: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py:_resolve_lookup:878 DEBUG - Exception while resolving variable 'errors' in template 'admin/change_list.html'.
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'NoneType' object has no attribute 'errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [errors] in None
+2019-09-29 18:03:34,120 [Thread-14: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py:_resolve_lookup:878 DEBUG - Exception while resolving variable 'show' in template 'admin/change_list.html'.
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    current = current[bit]
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'show'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 841, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'show'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'show'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [show] in [{'True': True, 'False': False, 'None': None, 'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x1123e28c8>>}]
+2019-09-29 18:03:34,121 [Thread-14: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py:_resolve_lookup:878 DEBUG - Exception while resolving variable 'is_multipart' in template 'admin/change_list.html'.
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'NoneType' object has no attribute 'is_multipart'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'is_multipart'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [is_multipart] in None
+2019-09-29 18:03:34,170 [Thread-14: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py:_resolve_lookup:878 DEBUG - Exception while resolving variable 'non_field_errors' in template 'admin/change_list.html'.
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'NoneType' object has no attribute 'non_field_errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'non_field_errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [non_field_errors] in None
+2019-09-29 18:03:34,170 [Thread-14: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py:_resolve_lookup:878 DEBUG - Exception while resolving variable 'non_field_errors' in template 'admin/change_list.html'.
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'NoneType' object has no attribute 'non_field_errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'non_field_errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [non_field_errors] in None
+2019-09-29 18:03:34,171 [Thread-14: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py:_resolve_lookup:878 DEBUG - Exception while resolving variable 'non_field_errors' in template 'admin/change_list.html'.
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'NoneType' object has no attribute 'non_field_errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'non_field_errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [non_field_errors] in None
+2019-09-29 18:03:34,172 [Thread-14: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py:_resolve_lookup:878 DEBUG - Exception while resolving variable 'non_field_errors' in template 'admin/change_list.html'.
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'NoneType' object has no attribute 'non_field_errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'non_field_errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [non_field_errors] in None
+2019-09-29 18:03:34,174 [Thread-14: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py:_resolve_lookup:878 DEBUG - Exception while resolving variable 'non_field_errors' in template 'admin/change_list.html'.
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'NoneType' object has no attribute 'non_field_errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'non_field_errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [non_field_errors] in None
+2019-09-29 18:03:34,180 [Thread-14: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/core/servers/basehttp.py:log_message:124 INFO - "GET /admin/apis/app/ HTTP/1.1" 200 5568
+2019-09-29 18:03:35,449 [Thread-16: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-09-29 18:03:35,450 [Thread-16: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2019-09-29 18:03:35,451 [Thread-16: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SELECT VERSION(); args=None
+2019-09-29 18:03:35,455 [Thread-16: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2019-09-29 18:03:35,456 [Thread-16: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.001) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2019-09-29 18:03:35.445067' AND `django_session`.`session_key` = '5pkv6zv5vmpdcsufdo95sb4oabr956n1'); args=('2019-09-29 18:03:35.445067', '5pkv6zv5vmpdcsufdo95sb4oabr956n1')
+2019-09-29 18:03:35,461 [Thread-16: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.001) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2019-09-29 18:03:35,466 [Thread-16: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.001) SELECT `apis_app`.`appid`, `apis_app`.`category`, `apis_app`.`application`, `apis_app`.`name`, `apis_app`.`publish_date`, `apis_app`.`url`, `apis_app`.`desc` FROM `apis_app` WHERE `apis_app`.`appid` = '7343d28f02aa6dd62733a841dc3fadfe'; args=('7343d28f02aa6dd62733a841dc3fadfe',)
+2019-09-29 18:03:35,564 [Thread-16: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/core/servers/basehttp.py:log_message:124 INFO - "GET /admin/apis/app/7343d28f02aa6dd62733a841dc3fadfe/change/ HTTP/1.1" 200 7034
+2019-09-29 18:03:35,590 [Thread-17: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-09-29 18:03:35,594 [Thread-17: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.003) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2019-09-29 18:03:35,596 [Thread-17: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.001) SELECT VERSION(); args=None
+2019-09-29 18:03:35,600 [Thread-17: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2019-09-29 18:03:35,602 [Thread-17: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.001) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2019-09-29 18:03:35.585420' AND `django_session`.`session_key` = '5pkv6zv5vmpdcsufdo95sb4oabr956n1'); args=('2019-09-29 18:03:35.585420', '5pkv6zv5vmpdcsufdo95sb4oabr956n1')
+2019-09-29 18:03:35,605 [Thread-17: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.001) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2019-09-29 18:03:35,610 [Thread-17: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/core/servers/basehttp.py:log_message:124 INFO - "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+2019-09-29 18:03:35,683 [Thread-18: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py:_resolve_lookup:878 DEBUG - Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/urls/resolvers.py", line 527, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'backend.version_1_0' from '/Users/chengyinliu/WeChatProjects/backend/backend/version_1_0.py'> (None:None) 'api/v1.0/'>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <URLPattern list> (admin:admin) 'admin/'>
+2019-09-29 18:03:35,690 [Thread-18: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py:_resolve_lookup:878 DEBUG - Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/urls/resolvers.py", line 527, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'backend.version_1_0' from '/Users/chengyinliu/WeChatProjects/backend/backend/version_1_0.py'> (None:None) 'api/v1.0/'>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <module 'backend.version_1_0' from '/Users/chengyinliu/WeChatProjects/backend/backend/version_1_0.py'> (None:None) 'api/v1.0/'>
+2019-09-29 18:03:35,692 [Thread-18: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py:get_response:93 WARNING - Not Found: /favicon.ico
+2019-09-29 18:03:35,694 [Thread-18: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/core/servers/basehttp.py:log_message:124 WARNING - "GET /favicon.ico HTTP/1.1" 404 2082
+2019-09-29 18:03:51,114 [Thread-19: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-09-29 18:03:51,115 [Thread-19: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2019-09-29 18:03:51,116 [Thread-19: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SELECT VERSION(); args=None
+2019-09-29 18:03:51,120 [Thread-19: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2019-09-29 18:03:51,126 [Thread-19: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.001) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2019-09-29 18:03:51.109974' AND `django_session`.`session_key` = '5pkv6zv5vmpdcsufdo95sb4oabr956n1'); args=('2019-09-29 18:03:51.109974', '5pkv6zv5vmpdcsufdo95sb4oabr956n1')
+2019-09-29 18:03:51,131 [Thread-19: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.001) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2019-09-29 18:03:51,187 [Thread-19: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py:_resolve_lookup:878 DEBUG - Exception while resolving variable 'is_popup' in template 'admin/index.html'.
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    current = current[bit]
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 841, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [is_popup] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x11269bbf8>>, 'request': <WSGIRequest: GET '/admin/'>, 'user': <SimpleLazyObject: <User: chengyinliu>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x1125e80b8>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x1125c1f28>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'site_title': 'Django site admin', 'site_header': 'Django administration', 'site_url': '/', 'has_permission': True, 'available_apps': [{'name': 'Apis', 'app_label': 'apis', 'app_url': '/admin/apis/', 'has_module_perms': True, 'models': [{'name': 'Apps', 'object_name': 'App', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/apis/app/', 'add_url': '/admin/apis/app/add/'}]}, {'name': 'Authentication and Authorization', 'app_label': 'auth', 'app_url': '/admin/auth/', 'has_module_perms': True, 'models': [{'name': 'Groups', 'object_name': 'Group', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/auth/group/', 'add_url': '/admin/auth/group/add/'}, {'name': 'Users', 'object_name': 'User', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/auth/user/', 'add_url': '/admin/auth/user/add/'}]}, {'name': 'Authorization', 'app_label': 'authorization', 'app_url': '/admin/authorization/', 'has_module_perms': True, 'models': [{'name': 'Users', 'object_name': 'User', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/authorization/user/', 'add_url': '/admin/authorization/user/add/'}]}], 'title': 'Site administration', 'app_list': [{'name': 'Apis', 'app_label': 'apis', 'app_url': '/admin/apis/', 'has_module_perms': True, 'models': [{'name': 'Apps', 'object_name': 'App', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/apis/app/', 'add_url': '/admin/apis/app/add/'}]}, {'name': 'Authentication and Authorization', 'app_label': 'auth', 'app_url': '/admin/auth/', 'has_module_perms': True, 'models': [{'name': 'Groups', 'object_name': 'Group', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/auth/group/', 'add_url': '/admin/auth/group/add/'}, {'name': 'Users', 'object_name': 'User', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/auth/user/', 'add_url': '/admin/auth/user/add/'}]}, {'name': 'Authorization', 'app_label': 'authorization', 'app_url': '/admin/authorization/', 'has_module_perms': True, 'models': [{'name': 'Users', 'object_name': 'User', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/authorization/user/', 'add_url': '/admin/authorization/user/add/'}]}], 'LANGUAGE_CODE': 'en-us', 'LANGUAGE_BIDI': False}]
+2019-09-29 18:03:51,190 [Thread-19: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py:_resolve_lookup:878 DEBUG - Exception while resolving variable 'is_popup' in template 'admin/index.html'.
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    current = current[bit]
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 841, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [is_popup] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x11269bbf8>>, 'request': <WSGIRequest: GET '/admin/'>, 'user': <SimpleLazyObject: <User: chengyinliu>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x1125e80b8>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x1125c1f28>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'site_title': 'Django site admin', 'site_header': 'Django administration', 'site_url': '/', 'has_permission': True, 'available_apps': [{'name': 'Apis', 'app_label': 'apis', 'app_url': '/admin/apis/', 'has_module_perms': True, 'models': [{'name': 'Apps', 'object_name': 'App', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/apis/app/', 'add_url': '/admin/apis/app/add/'}]}, {'name': 'Authentication and Authorization', 'app_label': 'auth', 'app_url': '/admin/auth/', 'has_module_perms': True, 'models': [{'name': 'Groups', 'object_name': 'Group', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/auth/group/', 'add_url': '/admin/auth/group/add/'}, {'name': 'Users', 'object_name': 'User', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/auth/user/', 'add_url': '/admin/auth/user/add/'}]}, {'name': 'Authorization', 'app_label': 'authorization', 'app_url': '/admin/authorization/', 'has_module_perms': True, 'models': [{'name': 'Users', 'object_name': 'User', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/authorization/user/', 'add_url': '/admin/authorization/user/add/'}]}], 'title': 'Site administration', 'app_list': [{'name': 'Apis', 'app_label': 'apis', 'app_url': '/admin/apis/', 'has_module_perms': True, 'models': [{'name': 'Apps', 'object_name': 'App', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/apis/app/', 'add_url': '/admin/apis/app/add/'}]}, {'name': 'Authentication and Authorization', 'app_label': 'auth', 'app_url': '/admin/auth/', 'has_module_perms': True, 'models': [{'name': 'Groups', 'object_name': 'Group', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/auth/group/', 'add_url': '/admin/auth/group/add/'}, {'name': 'Users', 'object_name': 'User', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/auth/user/', 'add_url': '/admin/auth/user/add/'}]}, {'name': 'Authorization', 'app_label': 'authorization', 'app_url': '/admin/authorization/', 'has_module_perms': True, 'models': [{'name': 'Users', 'object_name': 'User', 'perms': {'add': True, 'change': True, 'delete': True}, 'admin_url': '/admin/authorization/user/', 'add_url': '/admin/authorization/user/add/'}]}], 'LANGUAGE_CODE': 'en-us', 'LANGUAGE_BIDI': False}]
+2019-09-29 18:03:51,206 [Thread-19: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.001) SELECT `django_admin_log`.`id`, `django_admin_log`.`action_time`, `django_admin_log`.`user_id`, `django_admin_log`.`content_type_id`, `django_admin_log`.`object_id`, `django_admin_log`.`object_repr`, `django_admin_log`.`action_flag`, `django_admin_log`.`change_message`, `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined`, `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_admin_log` INNER JOIN `auth_user` ON (`django_admin_log`.`user_id` = `auth_user`.`id`) LEFT OUTER JOIN `django_content_type` ON (`django_admin_log`.`content_type_id` = `django_content_type`.`id`) WHERE `django_admin_log`.`user_id` = 1 ORDER BY `django_admin_log`.`action_time` DESC LIMIT 10; args=(1,)
+2019-09-29 18:03:51,209 [Thread-19: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/core/servers/basehttp.py:log_message:124 INFO - "GET /admin/ HTTP/1.1" 200 4284
+2019-09-29 18:06:28,652 [Thread-20: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py:_resolve_lookup:878 DEBUG - Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/urls/resolvers.py", line 527, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'backend.version_1_0' from '/Users/chengyinliu/WeChatProjects/backend/backend/version_1_0.py'> (None:None) 'api/v1.0/'>]], 'path': 'all/rss/'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <URLPattern list> (admin:admin) 'admin/'>
+2019-09-29 18:06:28,653 [Thread-20: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py:_resolve_lookup:878 DEBUG - Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/urls/resolvers.py", line 527, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'backend.version_1_0' from '/Users/chengyinliu/WeChatProjects/backend/backend/version_1_0.py'> (None:None) 'api/v1.0/'>]], 'path': 'all/rss/'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <module 'backend.version_1_0' from '/Users/chengyinliu/WeChatProjects/backend/backend/version_1_0.py'> (None:None) 'api/v1.0/'>
+2019-09-29 18:06:28,653 [Thread-20: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py:get_response:93 WARNING - Not Found: /all/rss/
+2019-09-29 18:06:28,654 [Thread-20: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/core/servers/basehttp.py:log_message:124 WARNING - "GET /all/rss/ HTTP/1.1" 404 2073
+2019-09-29 18:12:28,558 [Thread-21: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/core/servers/basehttp.py:log_message:124 INFO - "GET /api/v1.0/service/menu HTTP/1.1" 200 921
+2019-09-29 18:14:55,412 [Thread-22: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/core/servers/basehttp.py:log_message:124 INFO - "GET /api/v1.0/service/menu HTTP/1.1" 200 921
+2019-09-29 18:14:59,399 [Thread-23: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/core/servers/basehttp.py:log_message:124 INFO - "GET /api/v1.0/service/stock HTTP/1.1" 200 867
+2019-09-29 18:16:28,674 [Thread-24: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py:_resolve_lookup:878 DEBUG - Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/urls/resolvers.py", line 527, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'backend.version_1_0' from '/Users/chengyinliu/WeChatProjects/backend/backend/version_1_0.py'> (None:None) 'api/v1.0/'>]], 'path': 'all/rss/'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <URLPattern list> (admin:admin) 'admin/'>
+2019-09-29 18:16:28,674 [Thread-24: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py:_resolve_lookup:878 DEBUG - Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/urls/resolvers.py", line 527, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'backend.version_1_0' from '/Users/chengyinliu/WeChatProjects/backend/backend/version_1_0.py'> (None:None) 'api/v1.0/'>]], 'path': 'all/rss/'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <module 'backend.version_1_0' from '/Users/chengyinliu/WeChatProjects/backend/backend/version_1_0.py'> (None:None) 'api/v1.0/'>
+2019-09-29 18:16:28,675 [Thread-24: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py:get_response:93 WARNING - Not Found: /all/rss/
+2019-09-29 18:16:28,675 [Thread-24: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/core/servers/basehttp.py:log_message:124 WARNING - "GET /all/rss/ HTTP/1.1" 404 2073
+2019-09-29 18:20:19,621 [Thread-25: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/core/servers/basehttp.py:log_message:124 INFO - "GET /api/v1.0/service/menu HTTP/1.1" 200 921
+2019-09-29 18:20:23,521 [Thread-26: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-09-29 18:20:23,521 [Thread-26: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2019-09-29 18:20:23,521 [Thread-26: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SELECT VERSION(); args=None
+2019-09-29 18:20:23,522 [Thread-26: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2019-09-29 18:20:23,524 [Thread-26: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.002) SELECT `authorization_user`.`id`, `authorization_user`.`open_id`, `authorization_user`.`nickname`, `authorization_user`.`focus_cities`, `authorization_user`.`focus_constellations`, `authorization_user`.`focus_stocks` FROM `authorization_user` WHERE `authorization_user`.`open_id` = 'oSuQ75AB3wihUXLT1fUPAhG0h1Rw'; args=('oSuQ75AB3wihUXLT1fUPAhG0h1Rw',)
+2019-09-29 18:20:23,525 [Thread-26: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SELECT (1) AS `a` FROM `django_session` WHERE `django_session`.`session_key` = '2ratzfbkv8y4jxhrdvkiyxd174qeough' LIMIT 1; args=('2ratzfbkv8y4jxhrdvkiyxd174qeough',)
+2019-09-29 18:20:23,527 [Thread-26: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.001) INSERT INTO `django_session` (`session_key`, `session_data`, `expire_date`) VALUES ('2ratzfbkv8y4jxhrdvkiyxd174qeough', 'MDgwMjFiOWY1OTEzM2UzZTA5NzljMTk2Y2U3NTBjOGU5YzVkMWMzYzp7Im9wZW5faWQiOiJvU3VRNzVBQjN3aWhVWExUMWZVUEFoRzBoMVJ3IiwiaXNfYXV0aG9yaXplZCI6dHJ1ZX0=', '2019-09-30 18:20:23.525893'); args=('2ratzfbkv8y4jxhrdvkiyxd174qeough', 'MDgwMjFiOWY1OTEzM2UzZTA5NzljMTk2Y2U3NTBjOGU5YzVkMWMzYzp7Im9wZW5faWQiOiJvU3VRNzVBQjN3aWhVWExUMWZVUEFoRzBoMVJ3IiwiaXNfYXV0aG9yaXplZCI6dHJ1ZX0=', '2019-09-30 18:20:23.525893')
+2019-09-29 18:20:23,528 [Thread-26: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/core/servers/basehttp.py:log_message:124 INFO - "POST /api/v1.0/auth/authorize HTTP/1.1" 200 61
+2019-09-29 18:20:30,593 [Thread-27: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/core/servers/basehttp.py:log_message:124 INFO - "POST /api/v1.0/service/weather HTTP/1.1" 200 522
+2019-09-29 18:24:28,368 [Thread-29: 123145515298816]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/core/servers/basehttp.py:log_message:124 INFO - "GET /api/v1.0/service/menu HTTP/1.1" 200 921
+2019-09-29 18:24:28,683 [Thread-28: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-09-29 18:24:28,683 [Thread-28: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2019-09-29 18:24:28,684 [Thread-28: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SELECT VERSION(); args=None
+2019-09-29 18:24:28,684 [Thread-28: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2019-09-29 18:24:28,685 [Thread-28: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SELECT `authorization_user`.`id`, `authorization_user`.`open_id`, `authorization_user`.`nickname`, `authorization_user`.`focus_cities`, `authorization_user`.`focus_constellations`, `authorization_user`.`focus_stocks` FROM `authorization_user` WHERE `authorization_user`.`open_id` = 'oSuQ75AB3wihUXLT1fUPAhG0h1Rw'; args=('oSuQ75AB3wihUXLT1fUPAhG0h1Rw',)
+2019-09-29 18:24:28,687 [Thread-28: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SELECT (1) AS `a` FROM `django_session` WHERE `django_session`.`session_key` = 'vb3dobo6l9s40d4ykemisl93salb5kx1' LIMIT 1; args=('vb3dobo6l9s40d4ykemisl93salb5kx1',)
+2019-09-29 18:24:28,688 [Thread-28: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.001) INSERT INTO `django_session` (`session_key`, `session_data`, `expire_date`) VALUES ('vb3dobo6l9s40d4ykemisl93salb5kx1', 'MDgwMjFiOWY1OTEzM2UzZTA5NzljMTk2Y2U3NTBjOGU5YzVkMWMzYzp7Im9wZW5faWQiOiJvU3VRNzVBQjN3aWhVWExUMWZVUEFoRzBoMVJ3IiwiaXNfYXV0aG9yaXplZCI6dHJ1ZX0=', '2019-09-30 18:24:28.687357'); args=('vb3dobo6l9s40d4ykemisl93salb5kx1', 'MDgwMjFiOWY1OTEzM2UzZTA5NzljMTk2Y2U3NTBjOGU5YzVkMWMzYzp7Im9wZW5faWQiOiJvU3VRNzVBQjN3aWhVWExUMWZVUEFoRzBoMVJ3IiwiaXNfYXV0aG9yaXplZCI6dHJ1ZX0=', '2019-09-30 18:24:28.687357')
+2019-09-29 18:24:28,689 [Thread-28: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/core/servers/basehttp.py:log_message:124 INFO - "POST /api/v1.0/auth/authorize HTTP/1.1" 200 61
+2019-09-29 18:24:45,671 [Thread-30: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/core/servers/basehttp.py:log_message:124 INFO - "GET /api/v1.0/service/constellation HTTP/1.1" 200 4646
+2019-09-29 18:26:28,691 [Thread-31: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py:_resolve_lookup:878 DEBUG - Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/urls/resolvers.py", line 527, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'backend.version_1_0' from '/Users/chengyinliu/WeChatProjects/backend/backend/version_1_0.py'> (None:None) 'api/v1.0/'>]], 'path': 'all/rss/'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <URLPattern list> (admin:admin) 'admin/'>
+2019-09-29 18:26:28,692 [Thread-31: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py:_resolve_lookup:878 DEBUG - Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/urls/resolvers.py", line 527, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'backend.version_1_0' from '/Users/chengyinliu/WeChatProjects/backend/backend/version_1_0.py'> (None:None) 'api/v1.0/'>]], 'path': 'all/rss/'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <module 'backend.version_1_0' from '/Users/chengyinliu/WeChatProjects/backend/backend/version_1_0.py'> (None:None) 'api/v1.0/'>
+2019-09-29 18:26:28,692 [Thread-31: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py:get_response:93 WARNING - Not Found: /all/rss/
+2019-09-29 18:26:28,692 [Thread-31: 123145509507072]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/core/servers/basehttp.py:log_message:124 WARNING - "GET /all/rss/ HTTP/1.1" 404 2073
+2019-09-29 18:29:41,643 [Dummy-1: 123145534181376]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-09-29 18:29:41,644 [Dummy-1: 123145534181376]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2019-09-29 18:29:41,644 [Dummy-1: 123145534181376]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SELECT VERSION(); args=None
+2019-09-29 18:29:41,671 [Dummy-1: 123145534181376]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2019-09-29 18:29:41,674 [Dummy-1: 123145534181376]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.002) SHOW FULL TABLES; args=None
+2019-09-29 18:29:41,676 [Dummy-1: 123145534181376]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2019-09-29 18:30:08,243 [Dummy-1: 123145426030592]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-09-29 18:30:08,243 [Dummy-1: 123145426030592]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2019-09-29 18:30:08,244 [Dummy-1: 123145426030592]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SELECT VERSION(); args=None
+2019-09-29 18:30:08,264 [Dummy-1: 123145426030592]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2019-09-29 18:30:08,265 [Dummy-1: 123145426030592]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SHOW FULL TABLES; args=None
+2019-09-29 18:30:08,268 [Dummy-1: 123145426030592]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2019-09-29 18:30:13,973 [Dummy-1: 123145428525056]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-09-29 18:30:13,974 [Dummy-1: 123145428525056]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2019-09-29 18:30:13,974 [Dummy-1: 123145428525056]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SELECT VERSION(); args=None
+2019-09-29 18:30:14,000 [Dummy-1: 123145428525056]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2019-09-29 18:30:14,001 [Dummy-1: 123145428525056]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SHOW FULL TABLES; args=None
+2019-09-29 18:30:14,003 [Dummy-1: 123145428525056]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2019-09-29 18:30:34,381 [Dummy-1: 123145450565632]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-09-29 18:30:34,382 [Dummy-1: 123145450565632]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2019-09-29 18:30:34,383 [Dummy-1: 123145450565632]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SELECT VERSION(); args=None
+2019-09-29 18:30:34,449 [Dummy-1: 123145450565632]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2019-09-29 18:30:34,450 [Dummy-1: 123145450565632]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.001) SHOW FULL TABLES; args=None
+2019-09-29 18:30:34,458 [Dummy-1: 123145450565632]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2019-09-29 18:30:42,243 [Dummy-1: 123145413758976]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-09-29 18:30:42,244 [Dummy-1: 123145413758976]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2019-09-29 18:30:42,247 [Dummy-1: 123145413758976]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.001) SELECT VERSION(); args=None
+2019-09-29 18:30:42,373 [Dummy-1: 123145413758976]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2019-09-29 18:30:42,375 [Dummy-1: 123145413758976]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.001) SHOW FULL TABLES; args=None
+2019-09-29 18:30:42,392 [Dummy-1: 123145413758976]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2019-09-29 18:30:45,645 [Thread-2: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-09-29 18:30:45,659 [Thread-2: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.003) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2019-09-29 18:30:45,661 [Thread-2: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.001) SELECT VERSION(); args=None
+2019-09-29 18:30:45,666 [Thread-2: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2019-09-29 18:30:45,667 [Thread-2: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.001) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2019-09-29 18:30:45.638223' AND `django_session`.`session_key` = '5pkv6zv5vmpdcsufdo95sb4oabr956n1'); args=('2019-09-29 18:30:45.638223', '5pkv6zv5vmpdcsufdo95sb4oabr956n1')
+2019-09-29 18:30:45,671 [Thread-2: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.001) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2019-09-29 18:30:45,686 [Thread-2: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.001) SELECT COUNT(*) AS `__count` FROM `apis_app`; args=()
+2019-09-29 18:30:45,689 [Thread-2: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.001) SELECT COUNT(*) AS `__count` FROM `apis_app`; args=()
+2019-09-29 18:30:45,773 [Thread-2: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.001) SELECT `apis_app`.`appid`, `apis_app`.`category`, `apis_app`.`application`, `apis_app`.`name`, `apis_app`.`publish_date`, `apis_app`.`url`, `apis_app`.`desc` FROM `apis_app` ORDER BY `apis_app`.`appid` DESC; args=()
+2019-09-29 18:30:45,860 [Thread-2: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py:_resolve_lookup:878 DEBUG - Exception while resolving variable 'errors' in template 'admin/change_list.html'.
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'NoneType' object has no attribute 'errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [errors] in None
+2019-09-29 18:30:45,868 [Thread-2: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py:_resolve_lookup:878 DEBUG - Exception while resolving variable 'show' in template 'admin/change_list.html'.
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    current = current[bit]
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'show'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 841, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'show'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'show'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [show] in [{'True': True, 'False': False, 'None': None, 'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x10e995a60>>}]
+2019-09-29 18:30:45,871 [Thread-2: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py:_resolve_lookup:878 DEBUG - Exception while resolving variable 'is_multipart' in template 'admin/change_list.html'.
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'NoneType' object has no attribute 'is_multipart'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'is_multipart'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [is_multipart] in None
+2019-09-29 18:30:45,984 [Thread-2: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py:_resolve_lookup:878 DEBUG - Exception while resolving variable 'non_field_errors' in template 'admin/change_list.html'.
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'NoneType' object has no attribute 'non_field_errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'non_field_errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [non_field_errors] in None
+2019-09-29 18:30:45,986 [Thread-2: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py:_resolve_lookup:878 DEBUG - Exception while resolving variable 'non_field_errors' in template 'admin/change_list.html'.
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'NoneType' object has no attribute 'non_field_errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'non_field_errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [non_field_errors] in None
+2019-09-29 18:30:45,987 [Thread-2: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py:_resolve_lookup:878 DEBUG - Exception while resolving variable 'non_field_errors' in template 'admin/change_list.html'.
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'NoneType' object has no attribute 'non_field_errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'non_field_errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [non_field_errors] in None
+2019-09-29 18:30:45,999 [Thread-2: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py:_resolve_lookup:878 DEBUG - Exception while resolving variable 'non_field_errors' in template 'admin/change_list.html'.
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'NoneType' object has no attribute 'non_field_errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'non_field_errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [non_field_errors] in None
+2019-09-29 18:30:46,001 [Thread-2: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py:_resolve_lookup:878 DEBUG - Exception while resolving variable 'non_field_errors' in template 'admin/change_list.html'.
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'NoneType' object has no attribute 'non_field_errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'non_field_errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [non_field_errors] in None
+2019-09-29 18:30:46,009 [Thread-2: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/core/servers/basehttp.py:log_message:124 INFO - "GET /admin/apis/app/ HTTP/1.1" 200 5568
+2019-09-29 18:30:46,070 [Thread-3: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-09-29 18:30:46,071 [Thread-3: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2019-09-29 18:30:46,072 [Thread-3: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.001) SELECT VERSION(); args=None
+2019-09-29 18:30:46,088 [Thread-3: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.001) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2019-09-29 18:30:46,090 [Thread-3: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.001) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2019-09-29 18:30:46.066027' AND `django_session`.`session_key` = '5pkv6zv5vmpdcsufdo95sb4oabr956n1'); args=('2019-09-29 18:30:46.066027', '5pkv6zv5vmpdcsufdo95sb4oabr956n1')
+2019-09-29 18:30:46,094 [Thread-3: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.001) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2019-09-29 18:30:46,100 [Thread-3: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/core/servers/basehttp.py:log_message:124 INFO - "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+2019-09-29 18:30:47,867 [Thread-4: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-09-29 18:30:47,868 [Thread-4: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2019-09-29 18:30:47,869 [Thread-4: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SELECT VERSION(); args=None
+2019-09-29 18:30:47,872 [Thread-4: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2019-09-29 18:30:47,874 [Thread-4: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.001) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2019-09-29 18:30:47.863670' AND `django_session`.`session_key` = '5pkv6zv5vmpdcsufdo95sb4oabr956n1'); args=('2019-09-29 18:30:47.863670', '5pkv6zv5vmpdcsufdo95sb4oabr956n1')
+2019-09-29 18:30:47,887 [Thread-4: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.001) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2019-09-29 18:30:47,898 [Thread-4: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.001) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'apis' AND `django_content_type`.`model` = 'app'); args=('apis', 'app')
+2019-09-29 18:30:48,042 [Thread-4: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/core/servers/basehttp.py:log_message:124 INFO - "GET /admin/apis/app/add/ HTTP/1.1" 200 6629
+2019-09-29 18:30:48,075 [Thread-5: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-09-29 18:30:48,076 [Thread-5: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2019-09-29 18:30:48,077 [Thread-5: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SELECT VERSION(); args=None
+2019-09-29 18:30:48,081 [Thread-5: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2019-09-29 18:30:48,083 [Thread-5: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.001) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2019-09-29 18:30:48.069425' AND `django_session`.`session_key` = '5pkv6zv5vmpdcsufdo95sb4oabr956n1'); args=('2019-09-29 18:30:48.069425', '5pkv6zv5vmpdcsufdo95sb4oabr956n1')
+2019-09-29 18:30:48,107 [Thread-5: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.005) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2019-09-29 18:30:48,112 [Thread-5: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/core/servers/basehttp.py:log_message:124 INFO - "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+2019-09-29 18:30:48,557 [Thread-6: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py:_resolve_lookup:878 DEBUG - Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/urls/resolvers.py", line 527, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'backend.version_1_0' from '/Users/chengyinliu/WeChatProjects/backend/backend/version_1_0.py'> (None:None) 'api/v1.0/'>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <URLPattern list> (admin:admin) 'admin/'>
+2019-09-29 18:30:48,564 [Thread-6: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py:_resolve_lookup:878 DEBUG - Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/urls/resolvers.py", line 527, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'backend.version_1_0' from '/Users/chengyinliu/WeChatProjects/backend/backend/version_1_0.py'> (None:None) 'api/v1.0/'>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <module 'backend.version_1_0' from '/Users/chengyinliu/WeChatProjects/backend/backend/version_1_0.py'> (None:None) 'api/v1.0/'>
+2019-09-29 18:30:48,566 [Thread-6: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py:get_response:93 WARNING - Not Found: /favicon.ico
+2019-09-29 18:30:48,568 [Thread-6: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/core/servers/basehttp.py:log_message:124 WARNING - "GET /favicon.ico HTTP/1.1" 404 2082
+2019-09-29 18:31:00,840 [Thread-7: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-09-29 18:31:00,841 [Thread-7: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2019-09-29 18:31:00,841 [Thread-7: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SELECT VERSION(); args=None
+2019-09-29 18:31:00,844 [Thread-7: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2019-09-29 18:31:00,846 [Thread-7: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.001) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2019-09-29 18:31:00.838714' AND `django_session`.`session_key` = '5pkv6zv5vmpdcsufdo95sb4oabr956n1'); args=('2019-09-29 18:31:00.838714', '5pkv6zv5vmpdcsufdo95sb4oabr956n1')
+2019-09-29 18:31:00,848 [Thread-7: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.001) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2019-09-29 18:31:00,856 [Thread-7: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.001) UPDATE `apis_app` SET `category` = 'Test', `application` = 'TestApp', `name` = 'TestApp', `publish_date` = '2019-09-29', `url` = 'test', `desc` = 'TestApp' WHERE `apis_app`.`appid` = 'e0087bfd4d16ec2e7c45a61b11a9b66e'; args=('Test', 'TestApp', 'TestApp', '2019-09-29', 'test', 'TestApp', 'e0087bfd4d16ec2e7c45a61b11a9b66e')
+2019-09-29 18:31:00,861 [Thread-7: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.004) INSERT INTO `apis_app` (`appid`, `category`, `application`, `name`, `publish_date`, `url`, `desc`) VALUES ('e0087bfd4d16ec2e7c45a61b11a9b66e', 'Test', 'TestApp', 'TestApp', '2019-09-29', 'test', 'TestApp'); args=('e0087bfd4d16ec2e7c45a61b11a9b66e', 'Test', 'TestApp', 'TestApp', '2019-09-29', 'test', 'TestApp')
+2019-09-29 18:31:00,865 [Thread-7: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.002) INSERT INTO `django_admin_log` (`action_time`, `user_id`, `content_type_id`, `object_id`, `object_repr`, `action_flag`, `change_message`) VALUES ('2019-09-29 18:31:00.862155', 1, 8, 'e0087bfd4d16ec2e7c45a61b11a9b66e', 'TestApp(TestApp)', 1, '[{\"added\": {}}]'); args=['2019-09-29 18:31:00.862155', 1, 8, 'e0087bfd4d16ec2e7c45a61b11a9b66e', 'TestApp(TestApp)', 1, '[{"added": {}}]']
+2019-09-29 18:31:00,868 [Thread-7: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/core/servers/basehttp.py:log_message:124 INFO - "POST /admin/apis/app/add/ HTTP/1.1" 302 0
+2019-09-29 18:31:00,880 [Thread-8: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-09-29 18:31:00,881 [Thread-8: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2019-09-29 18:31:00,881 [Thread-8: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SELECT VERSION(); args=None
+2019-09-29 18:31:00,883 [Thread-8: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2019-09-29 18:31:00,884 [Thread-8: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.001) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2019-09-29 18:31:00.878285' AND `django_session`.`session_key` = '5pkv6zv5vmpdcsufdo95sb4oabr956n1'); args=('2019-09-29 18:31:00.878285', '5pkv6zv5vmpdcsufdo95sb4oabr956n1')
+2019-09-29 18:31:00,886 [Thread-8: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.001) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2019-09-29 18:31:00,888 [Thread-8: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.001) SELECT COUNT(*) AS `__count` FROM `apis_app`; args=()
+2019-09-29 18:31:00,890 [Thread-8: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SELECT COUNT(*) AS `__count` FROM `apis_app`; args=()
+2019-09-29 18:31:00,894 [Thread-8: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.001) SELECT `apis_app`.`appid`, `apis_app`.`category`, `apis_app`.`application`, `apis_app`.`name`, `apis_app`.`publish_date`, `apis_app`.`url`, `apis_app`.`desc` FROM `apis_app` ORDER BY `apis_app`.`appid` DESC; args=()
+2019-09-29 18:31:00,912 [Thread-8: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py:_resolve_lookup:878 DEBUG - Exception while resolving variable 'errors' in template 'admin/change_list.html'.
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'NoneType' object has no attribute 'errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [errors] in None
+2019-09-29 18:31:00,916 [Thread-8: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py:_resolve_lookup:878 DEBUG - Exception while resolving variable 'show' in template 'admin/change_list.html'.
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    current = current[bit]
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'show'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 841, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'show'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'show'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [show] in [{'True': True, 'False': False, 'None': None, 'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x10eac1ae8>>}]
+2019-09-29 18:31:00,917 [Thread-8: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py:_resolve_lookup:878 DEBUG - Exception while resolving variable 'is_multipart' in template 'admin/change_list.html'.
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'NoneType' object has no attribute 'is_multipart'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'is_multipart'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [is_multipart] in None
+2019-09-29 18:31:00,952 [Thread-8: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py:_resolve_lookup:878 DEBUG - Exception while resolving variable 'non_field_errors' in template 'admin/change_list.html'.
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'NoneType' object has no attribute 'non_field_errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'non_field_errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [non_field_errors] in None
+2019-09-29 18:31:00,953 [Thread-8: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py:_resolve_lookup:878 DEBUG - Exception while resolving variable 'non_field_errors' in template 'admin/change_list.html'.
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'NoneType' object has no attribute 'non_field_errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'non_field_errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [non_field_errors] in None
+2019-09-29 18:31:00,954 [Thread-8: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py:_resolve_lookup:878 DEBUG - Exception while resolving variable 'non_field_errors' in template 'admin/change_list.html'.
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'NoneType' object has no attribute 'non_field_errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'non_field_errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [non_field_errors] in None
+2019-09-29 18:31:00,955 [Thread-8: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py:_resolve_lookup:878 DEBUG - Exception while resolving variable 'non_field_errors' in template 'admin/change_list.html'.
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'NoneType' object has no attribute 'non_field_errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'non_field_errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [non_field_errors] in None
+2019-09-29 18:31:00,955 [Thread-8: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py:_resolve_lookup:878 DEBUG - Exception while resolving variable 'non_field_errors' in template 'admin/change_list.html'.
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'NoneType' object has no attribute 'non_field_errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'non_field_errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [non_field_errors] in None
+2019-09-29 18:31:00,956 [Thread-8: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py:_resolve_lookup:878 DEBUG - Exception while resolving variable 'non_field_errors' in template 'admin/change_list.html'.
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'NoneType' object has no attribute 'non_field_errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'non_field_errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [non_field_errors] in None
+2019-09-29 18:31:00,960 [Thread-8: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/core/servers/basehttp.py:log_message:124 INFO - "GET /admin/apis/app/ HTTP/1.1" 200 6069
+2019-09-29 18:31:00,978 [Thread-9: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-09-29 18:31:00,978 [Thread-9: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2019-09-29 18:31:00,979 [Thread-9: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SELECT VERSION(); args=None
+2019-09-29 18:31:00,981 [Thread-9: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2019-09-29 18:31:00,984 [Thread-9: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.002) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2019-09-29 18:31:00.975158' AND `django_session`.`session_key` = '5pkv6zv5vmpdcsufdo95sb4oabr956n1'); args=('2019-09-29 18:31:00.975158', '5pkv6zv5vmpdcsufdo95sb4oabr956n1')
+2019-09-29 18:31:00,987 [Thread-9: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.001) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2019-09-29 18:31:00,990 [Thread-9: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/core/servers/basehttp.py:log_message:124 INFO - "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+2019-09-29 18:31:05,396 [Thread-10: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-09-29 18:31:05,396 [Thread-10: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2019-09-29 18:31:05,397 [Thread-10: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SELECT VERSION(); args=None
+2019-09-29 18:31:05,398 [Thread-10: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2019-09-29 18:31:05,399 [Thread-10: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.001) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2019-09-29 18:31:05.393811' AND `django_session`.`session_key` = '5pkv6zv5vmpdcsufdo95sb4oabr956n1'); args=('2019-09-29 18:31:05.393811', '5pkv6zv5vmpdcsufdo95sb4oabr956n1')
+2019-09-29 18:31:05,402 [Thread-10: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.001) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2019-09-29 18:31:05,404 [Thread-10: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.001) SELECT `apis_app`.`appid`, `apis_app`.`category`, `apis_app`.`application`, `apis_app`.`name`, `apis_app`.`publish_date`, `apis_app`.`url`, `apis_app`.`desc` FROM `apis_app` WHERE `apis_app`.`appid` = 'e0087bfd4d16ec2e7c45a61b11a9b66e'; args=('e0087bfd4d16ec2e7c45a61b11a9b66e',)
+2019-09-29 18:31:05,454 [Thread-10: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/core/servers/basehttp.py:log_message:124 INFO - "GET /admin/apis/app/e0087bfd4d16ec2e7c45a61b11a9b66e/change/ HTTP/1.1" 200 7002
+2019-09-29 18:31:05,468 [Thread-11: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-09-29 18:31:05,469 [Thread-11: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2019-09-29 18:31:05,469 [Thread-11: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SELECT VERSION(); args=None
+2019-09-29 18:31:05,471 [Thread-11: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2019-09-29 18:31:05,474 [Thread-11: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.003) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2019-09-29 18:31:05.466591' AND `django_session`.`session_key` = '5pkv6zv5vmpdcsufdo95sb4oabr956n1'); args=('2019-09-29 18:31:05.466591', '5pkv6zv5vmpdcsufdo95sb4oabr956n1')
+2019-09-29 18:31:05,477 [Thread-11: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.001) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2019-09-29 18:31:05,480 [Thread-11: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/core/servers/basehttp.py:log_message:124 INFO - "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+2019-09-29 18:31:05,513 [Thread-12: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py:_resolve_lookup:878 DEBUG - Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/urls/resolvers.py", line 527, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'backend.version_1_0' from '/Users/chengyinliu/WeChatProjects/backend/backend/version_1_0.py'> (None:None) 'api/v1.0/'>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <URLPattern list> (admin:admin) 'admin/'>
+2019-09-29 18:31:05,513 [Thread-12: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py:_resolve_lookup:878 DEBUG - Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/urls/resolvers.py", line 527, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'backend.version_1_0' from '/Users/chengyinliu/WeChatProjects/backend/backend/version_1_0.py'> (None:None) 'api/v1.0/'>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <module 'backend.version_1_0' from '/Users/chengyinliu/WeChatProjects/backend/backend/version_1_0.py'> (None:None) 'api/v1.0/'>
+2019-09-29 18:31:05,515 [Thread-12: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py:get_response:93 WARNING - Not Found: /favicon.ico
+2019-09-29 18:31:05,515 [Thread-12: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/core/servers/basehttp.py:log_message:124 WARNING - "GET /favicon.ico HTTP/1.1" 404 2082
+2019-09-29 18:36:28,739 [Thread-13: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py:_resolve_lookup:878 DEBUG - Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/urls/resolvers.py", line 527, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'backend.version_1_0' from '/Users/chengyinliu/WeChatProjects/backend/backend/version_1_0.py'> (None:None) 'api/v1.0/'>]], 'path': 'all/rss/'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <URLPattern list> (admin:admin) 'admin/'>
+2019-09-29 18:36:28,743 [Thread-13: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py:_resolve_lookup:878 DEBUG - Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/urls/resolvers.py", line 527, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'backend.version_1_0' from '/Users/chengyinliu/WeChatProjects/backend/backend/version_1_0.py'> (None:None) 'api/v1.0/'>]], 'path': 'all/rss/'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <module 'backend.version_1_0' from '/Users/chengyinliu/WeChatProjects/backend/backend/version_1_0.py'> (None:None) 'api/v1.0/'>
+2019-09-29 18:36:28,745 [Thread-13: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py:get_response:93 WARNING - Not Found: /all/rss/
+2019-09-29 18:36:28,747 [Thread-13: 123145419014144]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/core/servers/basehttp.py:log_message:124 WARNING - "GET /all/rss/ HTTP/1.1" 404 2073

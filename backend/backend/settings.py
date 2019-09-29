@@ -156,7 +156,7 @@ LOGGING = {
             '()': 'ops.TestFilter'
         }
     },
-    'handlers':{
+    'handlers': {
         'console_handler': {
             'level': 'INFO',
             'class': 'logging.StreamHandler',
@@ -166,7 +166,7 @@ LOGGING = {
             'level': 'DEBUG',
             'class': 'logging.handlers.RotatingFileHandler',
             'filename': os.path.join(LOG_DIR, 'backend.log'),
-            'maxBytes': 1024*1024*1024,
+            'maxBytes': 1024 * 1024 * 1024,
             'backupCount': 5,
             'formatter': 'standard',
             'encoding': 'utf-8'
@@ -180,45 +180,11 @@ LOGGING = {
         }
     }
 }
-#
-# LOGGING = {
-#     'version': 1,
-#     # 日志格式
-#     'formatters': {
-#         'standard': {
-#             'format': '%(asctime)s [%(threadName)s: %(thread)d]'
-#                       '%(pathname)s:%(funcName)s:%(lineno)d %(levelname)s - %(message)s'
-#         }
-#     },
-#
-#     'filters': {
-#         'test': {
-#             '()': 'ops.TestFilter'
-#         }
-#     },
-#
-#     'handlers':{
-#         'console_handler': {
-#             'level': 'INFO',
-#             'class': 'logging.StreamHandler',
-#             'formatter': 'standard'
-#         },
-#         'file_handler': {
-#             'level': 'DEBUG',
-#             'class': 'logging.handlers.RotatingFileHandler',
-#             'filename': os.path.join(LOG_DIR, 'backend.log'),
-#             'maxBytes': 1024*1024*1024,
-#             'backupCount': 5,
-#             'formatter': 'standard',
-#             'encoding': 'utf-8'
-#         }
-#     },
-#
-#     'loggers': {
-#         'django': {
-#             'handlers': ['console_handler', 'file_handler'],
-#             'filters': ['test'],
-#             'level': 'DEBUG'
-#         }
-#     }
-# }
+
+CACHES = {
+    'default': {
+        # Local Mem Cache
+        'BACKEND': "django.core.cache.backends.locmem.LocMemCache",
+        'LOCATION': 'backend-cache'
+    }
+}

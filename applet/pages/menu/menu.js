@@ -12,9 +12,11 @@ Page({
   onLoad: function (options) {
     this.updateMenuData()
   },
+
   // 请求后台,更新menu数据
   updateMenuData: function(){
     var that = this
+    
     console.log(app.globalData)
     
     wx.request({
