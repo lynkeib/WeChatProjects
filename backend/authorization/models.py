@@ -17,3 +17,6 @@ class User(models.Model):
             # models.Index(fields=['nickname']),
             models.Index(fields=['open_id', 'nickname'])
         ]
+
+    def __str__(self):
+        return f"{self.nickname}"

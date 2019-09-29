@@ -23,7 +23,8 @@ class App(models.Model):
         }
 
     def __str__(self):
-        return str(self.to_dict())
+        # return str(self.to_dict())
+        return f"{self.name}({self.application})"
 
     def __repr__(self):
         return str(self.to_dict())
