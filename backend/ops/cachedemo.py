@@ -16,7 +16,10 @@ def basic_use():
     s2 = 'Hello World, Hello Django Timeout Cache'
     cache.set('key2', s2, 5)
     cache_result = cache.get('key2')
+    print(cache_result)
     time.sleep(5)
+    cache_result = cache.get('key2')
+    print(cache_result)
 
 
 if __name__ == '__main__':
