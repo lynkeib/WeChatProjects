@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import weather, menu, image, service
+from .views import weather, menu, image, service, test
 
 urlpatterns = [
     # path('', weather.helloworld)
@@ -11,5 +11,6 @@ urlpatterns = [
     path('image/list', image.ImageListVIew.as_view()),
     path('stock', service.stock),
     path('constellation', service.constellation),
-    path('joke', service.joke)
+    path('joke', service.joke),
+    path('test', test.test)
 ]
