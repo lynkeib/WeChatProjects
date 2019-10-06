@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 import os
 
 import pymysql
+
 # from decouple import config
 
 pymysql.install_as_MySQLdb()
@@ -162,6 +163,9 @@ LOGGING = {
         'standard': {
             'format': '%(asctime)s [%(threadName)s: %(thread)d]'
                       '%(pathname)s:%(funcName)s:%(lineno)d %(levelname)s - %(message)s'
+        },
+        'simple': {
+            'format': "%(asctime)s %(message)s"
         }
     },
     'filters': {
@@ -178,10 +182,19 @@ LOGGING = {
         'file_handler': {
             'level': 'DEBUG',
             'class': 'logging.handlers.RotatingFileHandler',
-            'filename': os.path.join(LOG_DIR, 'backend.log'),
+            'filename': os.path.join(LOG_DIR, 'service.log'),
             'maxBytes': 1024 * 1024 * 1024,
             'backupCount': 5,
             'formatter': 'standard',
+            'encoding': 'utf-8'
+        },
+        'statistics_handler': {
+            'level': 'DEBUG',
+            'class': 'logging.handlers.RotatingFileHandler',
+            'filename': os.path.join(LOG_DIR, 'statistics.log'),
+            'maxBytes': 1024 * 1024 * 1024,
+            'backupCount': 5,
+            'formatter': 'simple',
             'encoding': 'utf-8'
         }
     },
@@ -189,6 +202,10 @@ LOGGING = {
         'django': {
             'handlers': ['console_handler', 'file_handler'],
             'filters': ['test'],
+            'level': 'DEBUG'
+        },
+        'statistics': {
+            'handlers': ['statistics_handler'],
             'level': 'DEBUG'
         }
     }
@@ -218,3 +235,6 @@ EMAIL_HOST_USER = 'bconliu@gmail.com'
 EMAIL_HOST_PASSWORD = 'ubbiamabyhiargbv'
 EMAIL_USE_TLS = True
 EMAIL_FROM = 'bconliu@gmail.com'
+
+# Statistics delimiter
+STATISTICS_SPLIT_FLAG = '||'
