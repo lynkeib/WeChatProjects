@@ -227,7 +227,7 @@ CRONJOBS = [
     # ('*/1 * * * *', 'cron.jobs.demo')
     ('*/1 * * * *', 'cron.jobs.report_by_email')
 ]
-
+from cron.jobs import report_by_email
 # Email Config
 
 EMAIL_HOST = 'smtp.gmail.com'

@@ -74,4 +74,3 @@ def report_by_email():
     server.sendmail(settings.EMAIL_FROM, receivers, msg.as_string())
     server.close()
     logger.info("Send Monitor Email Success.")
-    return
