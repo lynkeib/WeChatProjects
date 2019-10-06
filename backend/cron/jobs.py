@@ -4,6 +4,8 @@ import datetime
 import os
 from backend import settings
 from collections import defaultdict
+from email.mime.text import MIMEText
+import smtplib
 
 logger = logging.getLogger('django')
 
@@ -60,5 +62,7 @@ def report_by_email():
     logger.info('Begin statistics data.')
     content = statistics()
     contect = '\r\n'.join(content)
-    
+    logger.info("End statistics data.")
+    receivers = ['bconliu@gmail.com']
+    msg = MIMEText()
     pass
