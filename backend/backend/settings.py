@@ -47,7 +47,7 @@ INSTALLED_APPS = [
     'authorization',
 
     ## Third-party
-    # 'django_crontab'
+    'django_crontab'
 ]
 
 MIDDLEWARE = [
@@ -224,7 +224,8 @@ CACHES = {
 # Cron COnfig
 
 CRONJOBS = [
-    ('*/1 * * * *', 'cron.jobs.demo')
+    # ('*/1 * * * *', 'cron.jobs.demo')
+    ('*/1 * * * *', 'cron.jobs.report_by_email')
 ]
 
 # Email Config

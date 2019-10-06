@@ -61,8 +61,17 @@ def statistics():
 def report_by_email():
     logger.info('Begin statistics data.')
     content = statistics()
-    contect = '\r\n'.join(content)
+    content = '\r\n'.join(content)
     logger.info("End statistics data.")
     receivers = ['bconliu@gmail.com']
-    msg = MIMEText()
-    pass
+    msg = MIMEText(content, 'plain', 'utf-8')
+    msg['FROM'] = '[Django Backend]'
+    msg['Subject'] = '[Django Services Performance Monitor]'
+
+    server = smtplib.SMTP_SSL(settings.EMAIL_HOST, settings.EMAIL_PORT)
+    # server.starttls() # if use port 587 and STMP, then have to have this line
+    server.login(settings.EMAIL_HOST_USER, settings.EMAIL_HOST_PASSWORD)
+    server.sendmail(settings.EMAIL_FROM, receivers, msg.as_string())
+    server.close()
+    logger.info("Send Monitor Email Success.")
+    return
