@@ -24,7 +24,7 @@ class StatisticsMiddleware:
         content_list.append(f'now=[{tock}]')
         content_list.append(f'path=[{path}]')
         content_list.append(f'full_path=[{full_path}]')
-        content_list.append(f'cost=[{round(cost, 1)}]')
+        content_list.append(f'cost=[{round(cost, 5)}]')
         content = settings.STATISTICS_SPLIT_FLAG.join(content_list)
         logger.info(content)
 
