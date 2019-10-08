@@ -1,11 +1,13 @@
 import json
 import requests
 import time
+from thirdparty.weather import CommonWeatherResult
 
 
-def weather(cityname):
+def weather(cityname, timeout=1):
     '''
     :param cityname: city name
+    :param timeout: second
     :return: return weather
     '''
     key = '13d36defa81488f1a438adbeb94622f1'
@@ -15,18 +17,19 @@ def weather(cityname):
     params = 'cityname=%s&key=%s' % (cityname, key)
     url = api + '?' + params
     print(url)
-    response = requests.get(url=url)
+    response = requests.get(url=url, timeout=timeout)
     data = json.loads(response.text)
     print(data)
     result = data.get('result')
     print('from weather.py', result)
     sk = result.get('sk')
     response = {}
-    response['temperature'] = sk.get('temp')
-    response['wind_direction'] = sk.get('wind_direction')
-    response['wind_strength'] = sk.get('wind_strength')
-    response['humidity'] = sk.get('humidity')
-    response['time'] = sk.get('time')
+    response = CommonWeatherResult()
+    response.temperature = sk.get('temp')
+    response.wind_direction = sk.get('wind_direction')
+    response.wind_strength = sk.get('wind_strength')
+    response.humidity = sk.get('humidity')
+    response.time = sk.get('time')
     print('from weather.py, response, ', response)
     return response
 

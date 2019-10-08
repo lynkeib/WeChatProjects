@@ -240,3 +240,6 @@ EMAIL_FROM = 'bconliu@gmail.com'
 
 # Statistics delimiter
 STATISTICS_SPLIT_FLAG = '||'
+
+# HA Request Timeout in second
+HA_TIMEOUT = 1

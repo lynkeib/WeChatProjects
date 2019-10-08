@@ -5,7 +5,8 @@ from django.views import View
 from utils.response import CommonResponseMixin, ReturnCode
 from utils.auth import already_authorized
 from authorization.models import User
-
+from thirdparty.weather.common import WeatherAPIProxy
+from backend import settings
 
 def helloworld(request):
     print('request method', request.method)
@@ -50,9 +51,10 @@ class WeatherView(View, CommonResponseMixin):
             user = User.objects.get(open_id=open_id)
             cities = json.loads(user.focus_cities)
             for city in cities:
-                result = juhe.weather(city.get('city'))
+                # result = juhe.weather(city.get('city'))
+                # result['city_info'] = city
+                result = WeatherAPIProxy.ha_request(city.get('city'), timeout=settings.HA_TIMEOUT)
                 result['city_info'] = city
-                data.append(result)
             response = self.wrap_json_response(data=data, code=ReturnCode.SUCCESS)
         return JsonResponse(data=response, safe=False)
 
