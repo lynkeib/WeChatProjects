@@ -5,6 +5,7 @@ from backend import settings
 logger = logging.getLogger('statistics')
 logger2 = logging.getLogger('django')
 
+
 # Statistics middleware
 
 class StatisticsMiddleware:
