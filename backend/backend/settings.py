@@ -229,6 +229,7 @@ CRONJOBS = [
     ('*/1 * * * *', 'cron.jobs.report_by_email')
 ]
 from cron.jobs import report_by_email
+
 # Email Config
 
 EMAIL_HOST = 'smtp.gmail.com'
@@ -243,3 +244,5 @@ STATISTICS_SPLIT_FLAG = '||'
 
 # HA Request Timeout in second
 HA_TIMEOUT = 1
+
+USE_PROXY = True

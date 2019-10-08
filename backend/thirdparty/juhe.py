@@ -2,6 +2,7 @@ import json
 import requests
 import time
 from thirdparty.weather import CommonWeatherResult
+from utils import proxy
 
 
 def weather(cityname, timeout=1):
@@ -17,7 +18,7 @@ def weather(cityname, timeout=1):
     params = 'cityname=%s&key=%s' % (cityname, key)
     url = api + '?' + params
     print(url)
-    response = requests.get(url=url, timeout=timeout)
+    response = requests.get(url=url, proxies=proxy.proxy(), timeout=timeout)
     data = json.loads(response.text)
     print(data)
     result = data.get('result')
