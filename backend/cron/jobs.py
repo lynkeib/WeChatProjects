@@ -30,7 +30,9 @@ def statistics():
             line = line.strip()
             content = line.split(' ')[2]
             content_list = content.split(settings.STATISTICS_SPLIT_FLAG)
-            log_time = int(content_list[0].split('=')[1][1:-1])  # [1:-1] means remove the "[]"
+            print(content_list)
+            print(content_list[0].split('=')[1][1:-1])
+            log_time = int(float(content_list[0].split('=')[1][1:-1]))  # [1:-1] means remove the "[]"
             path = content_list[1].split('=')[1][1:-1]
             full_path = content_list[2].split('=')[1][1:-1]
             cost = float(content_list[3].split('=')[1][1:-1])
@@ -61,6 +63,7 @@ def statistics():
 def report_by_email():
     logger.info('Begin statistics data.')
     content = statistics()
+    print(content)
     content = '\r\n'.join(content)
     logger.info("End statistics data.")
     receivers = ['bconliu@gmail.com']
@@ -74,3 +77,7 @@ def report_by_email():
     server.sendmail(settings.EMAIL_FROM, receivers, msg.as_string())
     server.close()
     logger.info("Send Monitor Email Success.")
+
+
+if __name__ == '__main__':
+    report_by_email()

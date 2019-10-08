@@ -166,7 +166,7 @@ LOGGING = {
                       '%(pathname)s:%(funcName)s:%(lineno)d %(levelname)s - %(message)s'
         },
         'simple': {
-            'format': "%(asctime)s %(message)s"
+            'format': '%(asctime)s %(message)s'
         }
     },
     'filters': {
@@ -187,7 +187,7 @@ LOGGING = {
             'maxBytes': 1024 * 1024 * 1024,
             'backupCount': 5,
             'formatter': 'standard',
-            'encoding': 'utf-8'
+            'encoding': 'utf8'
         },
         'statistics_handler': {
             'level': 'DEBUG',
@@ -196,7 +196,7 @@ LOGGING = {
             'maxBytes': 1024 * 1024 * 1024,
             'backupCount': 5,
             'formatter': 'simple',
-            'encoding': 'utf-8'
+            'encoding': 'utf8'
         }
     },
     'loggers': {
