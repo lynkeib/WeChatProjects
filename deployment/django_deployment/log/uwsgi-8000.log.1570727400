@@ -1,0 +1,9 @@
+[pid: 1266|app: 0|req: 1/1] 66.214.169.49 () {34 vars in 676 bytes} [Thu Oct 10 16:51:36 2019] GET / => generated 16559 bytes in 9 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+Not Found: /static/admin/css/fonts.css
+[pid: 1264|app: 0|req: 1/2] 66.214.169.49 () {32 vars in 604 bytes} [Thu Oct 10 16:51:37 2019] GET /static/admin/css/fonts.css => generated 2032 bytes in 11 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 1266|app: 0|req: 2/3] 127.0.0.1 () {32 vars in 623 bytes} [Thu Oct 10 17:09:59 2019] GET / => generated 16559 bytes in 3 msecs (HTTP/1.0 200) 3 headers in 96 bytes (1 switches on core 0)
+Not Found: /static/admin/css/fonts.css
+[pid: 1264|app: 0|req: 2/4] 127.0.0.1 () {32 vars in 577 bytes} [Thu Oct 10 17:09:59 2019] GET /static/admin/css/fonts.css => generated 2019 bytes in 3 msecs (HTTP/1.0 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 1265|app: 0|req: 1/5] 127.0.0.1 () {32 vars in 568 bytes} [Thu Oct 10 17:09:59 2019] GET /favicon.ico => generated 1974 bytes in 12 msecs (HTTP/1.0 404) 3 headers in 102 bytes (1 switches on core 0)
+Thu Oct 10 17:10:00 2019 - logsize: 1140, triggering rotation to /root/D/deployment/django_deployment/log/uwsgi-8000.log.1570727400...

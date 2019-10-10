@@ -1,0 +1,7 @@
+[pid: 1266|app: 0|req: 7/16] 127.0.0.1 () {32 vars in 598 bytes} [Thu Oct 10 17:19:27 2019] GET /admin/login/?next=/admin/ => generated 1855 bytes in 13 msecs (HTTP/1.0 200) 7 headers in 381 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 1264|app: 0|req: 6/17] 127.0.0.1 () {34 vars in 627 bytes} [Thu Oct 10 17:19:28 2019] GET /favicon.ico => generated 1974 bytes in 3 msecs (HTTP/1.0 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 1266|app: 0|req: 8/18] 127.0.0.1 () {36 vars in 792 bytes} [Thu Oct 10 17:33:32 2019] GET /admin/login/?next=/admin/ => generated 1855 bytes in 13 msecs (HTTP/1.0 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 1266|app: 0|req: 9/19] 127.0.0.1 () {36 vars in 792 bytes} [Thu Oct 10 17:34:23 2019] GET /admin/login/?next=/admin/ => generated 1855 bytes in 28 msecs (HTTP/1.0 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 1266|app: 0|req: 10/20] 47.92.5.11 () {26 vars in 374 bytes} [Thu Oct 10 17:36:46 2019] GET / => generated 16559 bytes in 2 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+Thu Oct 10 17:36:47 2019 - logsize: 1085, triggering rotation to /root/D/deployment/django_deployment/log/uwsgi-8000.log.1570729007...

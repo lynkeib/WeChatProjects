@@ -1,0 +1,9 @@
+Not Found: /static/admin/css/base.css
+[pid: 1264|app: 0|req: 4/11] 127.0.0.1 () {34 vars in 689 bytes} [Thu Oct 10 17:13:15 2019] GET /static/admin/css/base.css => generated 2016 bytes in 3 msecs (HTTP/1.0 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/admin/css/responsive.css
+[pid: 1265|app: 0|req: 3/12] 127.0.0.1 () {34 vars in 701 bytes} [Thu Oct 10 17:13:15 2019] GET /static/admin/css/responsive.css => generated 2034 bytes in 3 msecs (HTTP/1.0 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /static/admin/css/login.css
+[pid: 1267|app: 0|req: 1/13] 127.0.0.1 () {34 vars in 691 bytes} [Thu Oct 10 17:13:16 2019] GET /static/admin/css/login.css => generated 2019 bytes in 12 msecs (HTTP/1.0 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 1266|app: 0|req: 6/14] 127.0.0.1 () {36 vars in 792 bytes} [Thu Oct 10 17:19:13 2019] GET /admin/login/?next=/admin/ => generated 1855 bytes in 13 msecs (HTTP/1.0 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 1264|app: 0|req: 5/15] 127.0.0.1 () {36 vars in 792 bytes} [Thu Oct 10 17:19:17 2019] GET /admin/login/?next=/admin/ => generated 1855 bytes in 36 msecs (HTTP/1.0 200) 7 headers in 381 bytes (1 switches on core 0)
+Thu Oct 10 17:19:18 2019 - logsize: 1226, triggering rotation to /root/D/deployment/django_deployment/log/uwsgi-8000.log.1570727958...
