@@ -45,6 +45,8 @@ Page({
         var code = res.code
         var appId = app.globalData.appId
         var nickname = app.globalData.userInfo.nickName
+        
+
         that.setData({
           hasUserInfo:true,
           isLogin:true,
@@ -66,6 +68,8 @@ Page({
               wx.showToast({
                 title:"授权成功"
               })
+              app.setAuthStatus(true)
+              console.log('user data:', app.globalData)
               var cookie = cookieUtil.getSessionIDFromResponse(res)
               cookieUtil.setCookieToStorage(cookie)
               console.log(cookie)

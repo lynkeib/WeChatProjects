@@ -2,11 +2,7 @@ const app = getApp()
 
 Page({
   data: {
-    grids: [{
-      "name":"应用1"
-    },{
-      "name":"应用2"
-    }]
+    grids: null,
   },
   // 生命周期函数-监听加载页面
   onLoad: function (options) {
@@ -122,6 +118,7 @@ Page({
   moreApp: function () {
     console.log('moreApp')
     if (!app.globalData.auth.isAuthorized) {
+      console.log(app.globalData)
       wx.showToast({
         title: '请先登录',
         icon: 'none'
@@ -132,7 +129,7 @@ Page({
       url: '../applist/applist?userMenu=' + JSON.stringify(this.data.grids),
     })
   },
-  
+
   onPullDownRefresh: function () {
     wx.showLoading({
       title: '加载中',

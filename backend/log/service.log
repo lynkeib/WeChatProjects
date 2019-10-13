@@ -4868,3 +4868,207 @@ Traceback (most recent call last):
 django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <module 'backend.version_1_0' from '/Users/chengyinliu/WeChatProjects/backend/backend/version_1_0.py'> (None:None) 'api/v1.0/'>
 2019-10-13 18:39:55,020 [Thread-76: 123145577730048]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py:get_response:93 WARNING - Not Found: /all/rss/
 2019-10-13 18:39:55,020 [Thread-76: 123145577730048]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/core/servers/basehttp.py:log_message:124 WARNING - "GET /all/rss/ HTTP/1.1" 404 2073
+2019-10-13 18:44:43,725 [Thread-77: 123145577730048]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-10-13 18:44:43,725 [Thread-77: 123145577730048]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2019-10-13 18:44:43,726 [Thread-77: 123145577730048]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SELECT VERSION(); args=None
+2019-10-13 18:44:43,727 [Thread-77: 123145577730048]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2019-10-13 18:44:43,728 [Thread-77: 123145577730048]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.001) SELECT `authorization_user`.`id`, `authorization_user`.`open_id`, `authorization_user`.`nickname`, `authorization_user`.`focus_cities`, `authorization_user`.`focus_constellations`, `authorization_user`.`focus_stocks` FROM `authorization_user` WHERE `authorization_user`.`open_id` = 'oSuQ75AB3wihUXLT1fUPAhG0h1Rw'; args=('oSuQ75AB3wihUXLT1fUPAhG0h1Rw',)
+2019-10-13 18:44:43,730 [Thread-77: 123145577730048]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SELECT (1) AS `a` FROM `django_session` WHERE `django_session`.`session_key` = 'd7j7feiqmgpmp6id9lwc7a8cj1dix5bo' LIMIT 1; args=('d7j7feiqmgpmp6id9lwc7a8cj1dix5bo',)
+2019-10-13 18:44:43,731 [Thread-77: 123145577730048]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) INSERT INTO `django_session` (`session_key`, `session_data`, `expire_date`) VALUES ('d7j7feiqmgpmp6id9lwc7a8cj1dix5bo', 'MDgwMjFiOWY1OTEzM2UzZTA5NzljMTk2Y2U3NTBjOGU5YzVkMWMzYzp7Im9wZW5faWQiOiJvU3VRNzVBQjN3aWhVWExUMWZVUEFoRzBoMVJ3IiwiaXNfYXV0aG9yaXplZCI6dHJ1ZX0=', '2019-10-14 18:44:43.731180'); args=('d7j7feiqmgpmp6id9lwc7a8cj1dix5bo', 'MDgwMjFiOWY1OTEzM2UzZTA5NzljMTk2Y2U3NTBjOGU5YzVkMWMzYzp7Im9wZW5faWQiOiJvU3VRNzVBQjN3aWhVWExUMWZVUEFoRzBoMVJ3IiwiaXNfYXV0aG9yaXplZCI6dHJ1ZX0=', '2019-10-14 18:44:43.731180')
+2019-10-13 18:44:43,735 [Thread-77: 123145577730048]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/core/servers/basehttp.py:log_message:124 INFO - "POST /api/v1.0/auth/authorize HTTP/1.1" 200 61
+2019-10-13 18:44:45,872 [Thread-78: 123145577730048]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/core/servers/basehttp.py:log_message:124 INFO - "GET /api/v1.0/service/menu/list HTTP/1.1" 200 921
+2019-10-13 18:47:33,196 [Thread-79: 123145577730048]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-10-13 18:47:33,197 [Thread-79: 123145577730048]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2019-10-13 18:47:33,197 [Thread-79: 123145577730048]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SELECT VERSION(); args=None
+2019-10-13 18:47:33,198 [Thread-79: 123145577730048]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2019-10-13 18:47:33,199 [Thread-79: 123145577730048]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SELECT `authorization_user`.`id`, `authorization_user`.`open_id`, `authorization_user`.`nickname`, `authorization_user`.`focus_cities`, `authorization_user`.`focus_constellations`, `authorization_user`.`focus_stocks` FROM `authorization_user` WHERE `authorization_user`.`open_id` = 'oSuQ75AB3wihUXLT1fUPAhG0h1Rw'; args=('oSuQ75AB3wihUXLT1fUPAhG0h1Rw',)
+2019-10-13 18:47:33,201 [Thread-79: 123145577730048]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SELECT (1) AS `a` FROM `django_session` WHERE `django_session`.`session_key` = '6cl74jypptmfu70m8pt69hxz5rhkbm5g' LIMIT 1; args=('6cl74jypptmfu70m8pt69hxz5rhkbm5g',)
+2019-10-13 18:47:33,202 [Thread-79: 123145577730048]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) INSERT INTO `django_session` (`session_key`, `session_data`, `expire_date`) VALUES ('6cl74jypptmfu70m8pt69hxz5rhkbm5g', 'MDgwMjFiOWY1OTEzM2UzZTA5NzljMTk2Y2U3NTBjOGU5YzVkMWMzYzp7Im9wZW5faWQiOiJvU3VRNzVBQjN3aWhVWExUMWZVUEFoRzBoMVJ3IiwiaXNfYXV0aG9yaXplZCI6dHJ1ZX0=', '2019-10-14 18:47:33.201403'); args=('6cl74jypptmfu70m8pt69hxz5rhkbm5g', 'MDgwMjFiOWY1OTEzM2UzZTA5NzljMTk2Y2U3NTBjOGU5YzVkMWMzYzp7Im9wZW5faWQiOiJvU3VRNzVBQjN3aWhVWExUMWZVUEFoRzBoMVJ3IiwiaXNfYXV0aG9yaXplZCI6dHJ1ZX0=', '2019-10-14 18:47:33.201403')
+2019-10-13 18:47:33,202 [Thread-79: 123145577730048]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/core/servers/basehttp.py:log_message:124 INFO - "POST /api/v1.0/auth/authorize HTTP/1.1" 200 61
+2019-10-13 18:48:07,509 [Thread-80: 123145577730048]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-10-13 18:48:07,509 [Thread-80: 123145577730048]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2019-10-13 18:48:07,510 [Thread-80: 123145577730048]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SELECT VERSION(); args=None
+2019-10-13 18:48:07,511 [Thread-80: 123145577730048]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2019-10-13 18:48:07,511 [Thread-80: 123145577730048]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SELECT `authorization_user`.`id`, `authorization_user`.`open_id`, `authorization_user`.`nickname`, `authorization_user`.`focus_cities`, `authorization_user`.`focus_constellations`, `authorization_user`.`focus_stocks` FROM `authorization_user` WHERE `authorization_user`.`open_id` = 'oSuQ75AB3wihUXLT1fUPAhG0h1Rw'; args=('oSuQ75AB3wihUXLT1fUPAhG0h1Rw',)
+2019-10-13 18:48:07,513 [Thread-80: 123145577730048]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SELECT (1) AS `a` FROM `django_session` WHERE `django_session`.`session_key` = '1gehi1ontx8i35omjpklz78qs3v2i4gr' LIMIT 1; args=('1gehi1ontx8i35omjpklz78qs3v2i4gr',)
+2019-10-13 18:48:07,513 [Thread-80: 123145577730048]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) INSERT INTO `django_session` (`session_key`, `session_data`, `expire_date`) VALUES ('1gehi1ontx8i35omjpklz78qs3v2i4gr', 'MDgwMjFiOWY1OTEzM2UzZTA5NzljMTk2Y2U3NTBjOGU5YzVkMWMzYzp7Im9wZW5faWQiOiJvU3VRNzVBQjN3aWhVWExUMWZVUEFoRzBoMVJ3IiwiaXNfYXV0aG9yaXplZCI6dHJ1ZX0=', '2019-10-14 18:48:07.513369'); args=('1gehi1ontx8i35omjpklz78qs3v2i4gr', 'MDgwMjFiOWY1OTEzM2UzZTA5NzljMTk2Y2U3NTBjOGU5YzVkMWMzYzp7Im9wZW5faWQiOiJvU3VRNzVBQjN3aWhVWExUMWZVUEFoRzBoMVJ3IiwiaXNfYXV0aG9yaXplZCI6dHJ1ZX0=', '2019-10-14 18:48:07.513369')
+2019-10-13 18:48:07,514 [Thread-80: 123145577730048]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/core/servers/basehttp.py:log_message:124 INFO - "POST /api/v1.0/auth/authorize HTTP/1.1" 200 61
+2019-10-13 18:49:07,368 [Thread-81: 123145577730048]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-10-13 18:49:07,369 [Thread-81: 123145577730048]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2019-10-13 18:49:07,369 [Thread-81: 123145577730048]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SELECT VERSION(); args=None
+2019-10-13 18:49:07,370 [Thread-81: 123145577730048]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2019-10-13 18:49:07,371 [Thread-81: 123145577730048]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SELECT `authorization_user`.`id`, `authorization_user`.`open_id`, `authorization_user`.`nickname`, `authorization_user`.`focus_cities`, `authorization_user`.`focus_constellations`, `authorization_user`.`focus_stocks` FROM `authorization_user` WHERE `authorization_user`.`open_id` = 'oSuQ75AB3wihUXLT1fUPAhG0h1Rw'; args=('oSuQ75AB3wihUXLT1fUPAhG0h1Rw',)
+2019-10-13 18:49:07,372 [Thread-81: 123145577730048]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SELECT (1) AS `a` FROM `django_session` WHERE `django_session`.`session_key` = 'mo9bq03aw8juk6kmhbnp96oej0nf22f7' LIMIT 1; args=('mo9bq03aw8juk6kmhbnp96oej0nf22f7',)
+2019-10-13 18:49:07,373 [Thread-81: 123145577730048]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) INSERT INTO `django_session` (`session_key`, `session_data`, `expire_date`) VALUES ('mo9bq03aw8juk6kmhbnp96oej0nf22f7', 'MDgwMjFiOWY1OTEzM2UzZTA5NzljMTk2Y2U3NTBjOGU5YzVkMWMzYzp7Im9wZW5faWQiOiJvU3VRNzVBQjN3aWhVWExUMWZVUEFoRzBoMVJ3IiwiaXNfYXV0aG9yaXplZCI6dHJ1ZX0=', '2019-10-14 18:49:07.372726'); args=('mo9bq03aw8juk6kmhbnp96oej0nf22f7', 'MDgwMjFiOWY1OTEzM2UzZTA5NzljMTk2Y2U3NTBjOGU5YzVkMWMzYzp7Im9wZW5faWQiOiJvU3VRNzVBQjN3aWhVWExUMWZVUEFoRzBoMVJ3IiwiaXNfYXV0aG9yaXplZCI6dHJ1ZX0=', '2019-10-14 18:49:07.372726')
+2019-10-13 18:49:07,374 [Thread-81: 123145577730048]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/core/servers/basehttp.py:log_message:124 INFO - "POST /api/v1.0/auth/authorize HTTP/1.1" 200 61
+2019-10-13 18:49:09,629 [Thread-82: 123145577730048]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/core/servers/basehttp.py:log_message:124 INFO - "GET /api/v1.0/service/menu/list HTTP/1.1" 200 921
+2019-10-13 18:49:55,037 [Thread-83: 123145577730048]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py:_resolve_lookup:878 DEBUG - Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/urls/resolvers.py", line 527, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'backend.version_1_0' from '/Users/chengyinliu/WeChatProjects/backend/backend/version_1_0.py'> (None:None) 'api/v1.0/'>]], 'path': 'all/rss/'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <URLPattern list> (admin:admin) 'admin/'>
+2019-10-13 18:49:55,037 [Thread-83: 123145577730048]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py:_resolve_lookup:878 DEBUG - Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/urls/resolvers.py", line 527, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'backend.version_1_0' from '/Users/chengyinliu/WeChatProjects/backend/backend/version_1_0.py'> (None:None) 'api/v1.0/'>]], 'path': 'all/rss/'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <module 'backend.version_1_0' from '/Users/chengyinliu/WeChatProjects/backend/backend/version_1_0.py'> (None:None) 'api/v1.0/'>
+2019-10-13 18:49:55,038 [Thread-83: 123145577730048]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py:get_response:93 WARNING - Not Found: /all/rss/
+2019-10-13 18:49:55,039 [Thread-83: 123145577730048]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/core/servers/basehttp.py:log_message:124 WARNING - "GET /all/rss/ HTTP/1.1" 404 2073
+2019-10-13 18:53:22,284 [Thread-84: 123145577730048]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-10-13 18:53:22,284 [Thread-84: 123145577730048]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2019-10-13 18:53:22,285 [Thread-84: 123145577730048]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SELECT VERSION(); args=None
+2019-10-13 18:53:22,287 [Thread-84: 123145577730048]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2019-10-13 18:53:22,288 [Thread-84: 123145577730048]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.001) SELECT `authorization_user`.`id`, `authorization_user`.`open_id`, `authorization_user`.`nickname`, `authorization_user`.`focus_cities`, `authorization_user`.`focus_constellations`, `authorization_user`.`focus_stocks` FROM `authorization_user` WHERE `authorization_user`.`open_id` = 'oSuQ75AB3wihUXLT1fUPAhG0h1Rw'; args=('oSuQ75AB3wihUXLT1fUPAhG0h1Rw',)
+2019-10-13 18:53:22,289 [Thread-84: 123145577730048]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SELECT (1) AS `a` FROM `django_session` WHERE `django_session`.`session_key` = '1uyp7bovzalirln10t1vtq74qj013cjn' LIMIT 1; args=('1uyp7bovzalirln10t1vtq74qj013cjn',)
+2019-10-13 18:53:22,290 [Thread-84: 123145577730048]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) INSERT INTO `django_session` (`session_key`, `session_data`, `expire_date`) VALUES ('1uyp7bovzalirln10t1vtq74qj013cjn', 'MDgwMjFiOWY1OTEzM2UzZTA5NzljMTk2Y2U3NTBjOGU5YzVkMWMzYzp7Im9wZW5faWQiOiJvU3VRNzVBQjN3aWhVWExUMWZVUEFoRzBoMVJ3IiwiaXNfYXV0aG9yaXplZCI6dHJ1ZX0=', '2019-10-14 18:53:22.289888'); args=('1uyp7bovzalirln10t1vtq74qj013cjn', 'MDgwMjFiOWY1OTEzM2UzZTA5NzljMTk2Y2U3NTBjOGU5YzVkMWMzYzp7Im9wZW5faWQiOiJvU3VRNzVBQjN3aWhVWExUMWZVUEFoRzBoMVJ3IiwiaXNfYXV0aG9yaXplZCI6dHJ1ZX0=', '2019-10-14 18:53:22.289888')
+2019-10-13 18:53:22,291 [Thread-84: 123145577730048]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/core/servers/basehttp.py:log_message:124 INFO - "POST /api/v1.0/auth/authorize HTTP/1.1" 200 61
+2019-10-13 18:53:23,693 [Thread-85: 123145577730048]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/core/servers/basehttp.py:log_message:124 INFO - "GET /api/v1.0/service/menu/list HTTP/1.1" 200 921
+2019-10-13 18:56:46,434 [Thread-86: 123145577730048]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2019-10-13 18:56:46,435 [Thread-86: 123145577730048]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2019-10-13 18:56:46,435 [Thread-86: 123145577730048]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SELECT VERSION(); args=None
+2019-10-13 18:56:46,436 [Thread-86: 123145577730048]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2019-10-13 18:56:46,437 [Thread-86: 123145577730048]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SELECT `authorization_user`.`id`, `authorization_user`.`open_id`, `authorization_user`.`nickname`, `authorization_user`.`focus_cities`, `authorization_user`.`focus_constellations`, `authorization_user`.`focus_stocks` FROM `authorization_user` WHERE `authorization_user`.`open_id` = 'oSuQ75AB3wihUXLT1fUPAhG0h1Rw'; args=('oSuQ75AB3wihUXLT1fUPAhG0h1Rw',)
+2019-10-13 18:56:46,438 [Thread-86: 123145577730048]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) SELECT (1) AS `a` FROM `django_session` WHERE `django_session`.`session_key` = 'y4b5ram5b0bc7z5d6kgo0f554eyxfn0r' LIMIT 1; args=('y4b5ram5b0bc7z5d6kgo0f554eyxfn0r',)
+2019-10-13 18:56:46,439 [Thread-86: 123145577730048]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/db/backends/utils.py:execute:111 DEBUG - (0.000) INSERT INTO `django_session` (`session_key`, `session_data`, `expire_date`) VALUES ('y4b5ram5b0bc7z5d6kgo0f554eyxfn0r', 'MDgwMjFiOWY1OTEzM2UzZTA5NzljMTk2Y2U3NTBjOGU5YzVkMWMzYzp7Im9wZW5faWQiOiJvU3VRNzVBQjN3aWhVWExUMWZVUEFoRzBoMVJ3IiwiaXNfYXV0aG9yaXplZCI6dHJ1ZX0=', '2019-10-14 18:56:46.438935'); args=('y4b5ram5b0bc7z5d6kgo0f554eyxfn0r', 'MDgwMjFiOWY1OTEzM2UzZTA5NzljMTk2Y2U3NTBjOGU5YzVkMWMzYzp7Im9wZW5faWQiOiJvU3VRNzVBQjN3aWhVWExUMWZVUEFoRzBoMVJ3IiwiaXNfYXV0aG9yaXplZCI6dHJ1ZX0=', '2019-10-14 18:56:46.438935')
+2019-10-13 18:56:46,441 [Thread-86: 123145577730048]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/core/servers/basehttp.py:log_message:124 INFO - "POST /api/v1.0/auth/authorize HTTP/1.1" 200 61
+2019-10-13 18:56:46,543 [Thread-87: 123145577730048]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/core/servers/basehttp.py:log_message:124 INFO - "GET /api/v1.0/service/menu/list HTTP/1.1" 200 921
+2019-10-13 18:59:55,054 [Thread-88: 123145577730048]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py:_resolve_lookup:878 DEBUG - Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/urls/resolvers.py", line 527, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'backend.version_1_0' from '/Users/chengyinliu/WeChatProjects/backend/backend/version_1_0.py'> (None:None) 'api/v1.0/'>]], 'path': 'all/rss/'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <URLPattern list> (admin:admin) 'admin/'>
+2019-10-13 18:59:55,055 [Thread-88: 123145577730048]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py:_resolve_lookup:878 DEBUG - Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/urls/resolvers.py", line 527, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'backend.version_1_0' from '/Users/chengyinliu/WeChatProjects/backend/backend/version_1_0.py'> (None:None) 'api/v1.0/'>]], 'path': 'all/rss/'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <module 'backend.version_1_0' from '/Users/chengyinliu/WeChatProjects/backend/backend/version_1_0.py'> (None:None) 'api/v1.0/'>
+2019-10-13 18:59:55,056 [Thread-88: 123145577730048]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py:get_response:93 WARNING - Not Found: /all/rss/
+2019-10-13 18:59:55,056 [Thread-88: 123145577730048]/Users/chengyinliu/anaconda3/lib/python3.7/site-packages/django/core/servers/basehttp.py:log_message:124 WARNING - "GET /all/rss/ HTTP/1.1" 404 2073
