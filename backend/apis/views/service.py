@@ -5,6 +5,7 @@ from django.http import JsonResponse
 from django.core.cache import cache
 from utils.timeutil import get_day_left_in_second
 import logging
+import datetime
 
 from backend import settings
 from utils.response import CommonResponseMixin, ReturnCode
@@ -51,6 +52,7 @@ def stock(request):
         result = thirdparty.juhe.stock(stock['market'], stock['code'])
         data.append(result)
     response = CommonResponseMixin.wrap_json_response(data=data, code=ReturnCode.SUCCESS)
+    print('stock', f'{datetime.datetime.now()}', response)
     return JsonResponse(data=response, safe=False)
 
 

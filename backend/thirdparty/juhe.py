@@ -31,6 +31,7 @@ def weather(cityname, timeout=1):
     response.wind_strength = sk.get('wind_strength')
     response.humidity = sk.get('humidity')
     response.time = sk.get('time')
+    response = response.to_dict()
     print('from weather.py, response, ', response)
     return response
 

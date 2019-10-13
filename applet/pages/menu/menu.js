@@ -13,22 +13,82 @@ Page({
     this.updateMenuData()
   },
 
+  fillIconData: function(menuData){
+
+    var pathPrefix = '../../resources/icons/application/'
+    for (var index = 0; index < menuData.length; index++){
+      var item = menuData[index]
+      switch (item.app.application){
+        case 'weather':
+          item.icon = pathPrefix + 'application-weather.png'
+          console.log(item.icon)
+          break
+        case 'stock':
+          item.icon = pathPrefix + 'application-stock.png'
+          break
+        case 'joke':
+          item.icon = pathPrefix + 'application-joke.png'
+          break
+        case 'constellation':
+          item.icon = pathPrefix + 'application-constellation.png'
+          break
+        case 'backup':
+          item.icon = pathPrefix + 'application-images.png'
+          break
+      }
+    }
+    return menuData
+  },
+
   // 请求后台,更新menu数据
   updateMenuData: function(){
     var that = this
     
     console.log(app.globalData)
     
-    wx.request({
-      url: app.globalData.serverUrl + app.globalData.apiVersion + '/service/menu',
-      success: function(res){
-        var menuData = res.data.data
-        // console.log(res.data.data)
-        that.setData({
-          grids: menuData
-        })
-      }
-    })
+    if (!app.globalData.auth.isAuthorized) {
+      wx.request({
+        url: app.globalData.serverUrl + app.globalData.apiVersion + '/service/menu/list',
+        header: {
+          'content-type': 'application/json' // default value
+        },
+
+        success(res) {
+          var menuData = res.data.data
+          menuData = that.fillIconData(menuData)
+          // set menu Data
+          that.setData({
+            grids: menuData,
+          })
+        }
+      })
+    } else{
+        var cookie = cookieUtil.getCookieFromStorage()
+        var header = {}
+        header.Cookie = cookie
+        wx.request({
+          url: app.globalData.serverUrl + app.globalData.apiVersion + '/service/menu/user',
+          header: header,
+          success: function(res){
+            var menuData = res.data.data
+
+            if (res.data.data) {
+              menuData = res.data.data
+              menuData = that.fillIconData(menuData)
+            } else {
+              wx.showToast({
+                title: '用户暂无应用，请点击添加！',
+                icon: 'none'
+              })
+            }
+            console.log(menuData)
+            // console.log(res.data.data)
+            that.setData({
+              grids: menuData
+            })
+        }
+      })
+    }
   },
 
   onNavigatorTap: function(e){
@@ -57,5 +117,27 @@ Page({
     //     url: '../backup/backup'
     //   })
     // }
+  },
+
+  moreApp: function () {
+    console.log('moreApp')
+    if (!app.globalData.auth.isAuthorized) {
+      wx.showToast({
+        title: '请先登录',
+        icon: 'none'
+      })
+      return
+    }
+    wx.navigateTo({
+      url: '../applist/applist?userMenu=' + JSON.stringify(this.data.grids),
+    })
+  },
+  
+  onPullDownRefresh: function () {
+    wx.showLoading({
+      title: '加载中',
+    })
+    this.updateMenuData()
+    wx.hideLoading()
   }
 });

@@ -22,6 +22,7 @@ Page({
       url: '../logs/logs'
     })
   },
+
   onLoad: function () {
     if (app.globalData.userInfo) {
       this.setData({
@@ -72,6 +73,7 @@ Page({
       url: app.globalData.serverUrl + app.globalData.apiVersion + '/service/weather',
       header:header,
       success:function(res){
+        console.log("loading weather")
         console.log(res)
         that.setData({
           weatherData:res.data.data
@@ -83,6 +85,7 @@ Page({
       url: app.globalData.serverUrl + app.globalData.apiVersion + '/service/constellation',
       header: header,
       success: function (res) {
+        console.log("loading constellation")
         that.setData({
           constellationData: res.data.data
         })
@@ -93,6 +96,7 @@ Page({
       url: app.globalData.serverUrl + app.globalData.apiVersion + '/service/stock',
       header: header,
       success: function (res) {
+        console.log("loading stock")
         that.setData({
           stockData: res.data.data
         })
