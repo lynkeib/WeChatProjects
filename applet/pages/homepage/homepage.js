@@ -2,6 +2,7 @@
 
 const app = getApp()
 const cookieUtil = require('../../utils/cookie.js')
+const authUtil = require('../../utils/auth.js')
 
 Page({
 
@@ -88,6 +89,44 @@ Page({
   },
 
   onNavigatorTap:function(event){
+    var that = this
+    var promise = authUtil.getStatus(app)
+    promise.then(function(status){
+      if (status){
+        that.setData({
+          isLogin: true
+        })
+        app.setAuthStatus(true)
+
+      }else{
+        that.setData({
+          isLogin: false
+        })
+        app.setAuthStatus(false)
+        wx.showToast({
+          title: '请先授权登录'
+        })
+      }
+      if (status){
+        console.log(event.currentTarget.dataset.type)
+        var navigatorType = event.currentTarget.dataset.type
+
+        if (navigatorType == 'focusCity') {
+          navigatorType = 'city'
+        } else if (navigatorType == 'focusStock') {
+          navigatorType = 'stock'
+        } else {
+          navigatorType = 'constellation'
+        }
+
+        var url = '../picker/picker?type=' + navigatorType
+        wx.navigateTo({
+          url: url,
+        })
+      }
+    })
+
+/*
     var cookie = cookieUtil.getCookieFromStorage()
     if (cookie.length == 0){
       wx.showToast({
@@ -111,7 +150,7 @@ Page({
     var url = '../picker/picker?type=' + navigatorType
     wx.navigateTo({
       url: url,
-    })
+    })*/
   },
 
   logout: function(){
