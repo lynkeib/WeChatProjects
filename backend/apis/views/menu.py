@@ -32,6 +32,20 @@ def get_menu(request):
     print(response)
     return JsonResponse(data=response, safe=False)
 
+def get_menu2(request):
+    # global_app_data = init_app_data()
+    # published_apps = global_app_data['published']
+    # return JsonResponse(data=published_apps, safe=False, status=200)
+    query_set = App.objects.all()
+    all_app = []
+    for app in query_set:
+        all_app.append(app.to_dict())
+    print(all_app)
+    response = CommonResponseMixin.wrap_json_response(data=all_app)
+    print(response)
+    return JsonResponse(data=response, safe=False)
+
+
 class UserMenu(View, CommonResponseMixin):
     def get(self, request):
         # 如果没登录，返回未鉴权
@@ -42,10 +56,11 @@ class UserMenu(View, CommonResponseMixin):
         open_id = request.session.get('open_id')
         user = User.objects.get(open_id=open_id)
         menu_list = user.menu.all()
-
+        print('menu list in UserMenu GET', menu_list)
         user_menu = []
         for app in menu_list:
             user_menu.append(app.to_dict())
+        print('user_menu list in UserMenu GET', user_menu)
         response = self.wrap_json_response(data=user_menu, code=ReturnCode.SUCCESS)
         return JsonResponse(response, safe=False)
 

@@ -8,7 +8,7 @@ urlpatterns = [
     path('menu', menu.get_menu),
 
     path('menu/user', menu.UserMenu.as_view()),
-    path('menu/list', menu.get_menu),
+    path('menu/list', menu.get_menu2),
 
     path('image', image.ImageView.as_view()),
     path('imagetext', image.image_text),
