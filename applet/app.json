@@ -8,8 +8,7 @@
     "pages/stock/stock",
     "pages/service/service",
     "pages/homepage/homepage",
-    "pages/picker/picker",
-    "pages/applist/applist"
+    "pages/picker/picker"
   ],
   "window": {
     "backgroundTextStyle": "light",

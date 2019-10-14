@@ -117,7 +117,8 @@ Page({
 
   moreApp: function () {
     console.log('moreApp')
-    if (!app.globalData.auth.isAuthorized) {
+    console.log('moreAPP calling', app.globalData)
+    if (!app.getAuthStatus) {
       console.log(app.globalData)
       wx.showToast({
         title: '请先登录',
