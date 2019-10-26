@@ -125,7 +125,7 @@ Page({
       wx.navigateTo({
         url: '../weather/weather',
       })
-    } else if (item.application == 'backup-image') {
+    } else if (item.application == 'backup') {
       wx.navigateTo({
         url: '../backup/backup',
       })
