@@ -2,6 +2,7 @@
 //获取应用实例
 const app = getApp()
 const cookieUtil = require('../../utils/cookie.js')
+const authUtil = require('../../utils/auth.js')
 
 Page({
   data: {
@@ -22,6 +23,7 @@ Page({
       url: '../logs/logs'
     })
   },
+
   onLoad: function () {
     if (app.globalData.userInfo) {
       this.setData({
@@ -72,6 +74,7 @@ Page({
       url: app.globalData.serverUrl + app.globalData.apiVersion + '/service/weather',
       header:header,
       success:function(res){
+        console.log("loading weather")
         console.log(res)
         that.setData({
           weatherData:res.data.data
@@ -83,6 +86,7 @@ Page({
       url: app.globalData.serverUrl + app.globalData.apiVersion + '/service/constellation',
       header: header,
       success: function (res) {
+        console.log("loading constellation")
         that.setData({
           constellationData: res.data.data
         })
@@ -93,6 +97,7 @@ Page({
       url: app.globalData.serverUrl + app.globalData.apiVersion + '/service/stock',
       header: header,
       success: function (res) {
+        console.log("loading stock")
         that.setData({
           stockData: res.data.data
         })
@@ -103,28 +108,46 @@ Page({
 
   onPullDownRefresh:function(){
     var that = this
-    var cookie = cookieUtil.getCookieFromStorage()
-    var header = {}
-    header.Cookie = cookie
-    wx.request({
-      url:app.globalData.serverUrl + app.globalData.apiVersion + '/auth/status',
-      header:header,
-      success:function(res){
-        var data = res.data.data
-        if(data.is_authorized == 1){
-          that.setData({
-            isAuthorized:true
-          })
-          that.updateData()
-        }else{
-          that.setData({
-            isAuthorized: false
-          })
-          wx.showToast({
-            title: '清先授权登录',
-          })
-        }
-      }
+
+    var promise = authUtil.getStatus(app)
+
+    promise.then(function(status){
+      if (status) {
+        that.setData({
+          isAuthorized: true
+        })
+        that.updateData()
+      } else {
+        that.setData({
+          isAuthorized: false
+        })
+        wx.showToast({
+          title: '清先授权登录',
+        })}
     })
+  // }
+    // var cookie = cookieUtil.getCookieFromStorage()
+    // var header = {}
+    // header.Cookie = cookie
+    // wx.request({
+    //   url:app.globalData.serverUrl + app.globalData.apiVersion + '/auth/status',
+    //   header:header,
+    //   success:function(res){
+    //     var data = res.data.data
+    //     if(data.is_authorized == 1){
+    //       that.setData({
+    //         isAuthorized:true
+    //       })
+    //       that.updateData()
+    //     }else{
+    //       that.setData({
+    //         isAuthorized: false
+    //       })
+    //       wx.showToast({
+    //         title: '清先授权登录',
+    //       })
+    //     }
+    //   }
+    // })
   }
 })

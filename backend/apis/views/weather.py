@@ -7,6 +7,7 @@ from utils.auth import already_authorized
 from authorization.models import User
 from thirdparty.weather.common import WeatherAPIProxy
 from backend import settings
+import datetime
 
 def helloworld(request):
     print('request method', request.method)
@@ -54,8 +55,11 @@ class WeatherView(View, CommonResponseMixin):
                 # result = juhe.weather(city.get('city'))
                 # result['city_info'] = city
                 result = WeatherAPIProxy.ha_request(city.get('city'), timeout=settings.HA_TIMEOUT)
+                print("this is the result in WeatherView", result)
                 result['city_info'] = city
+                data.append(result)
             response = self.wrap_json_response(data=data, code=ReturnCode.SUCCESS)
+            print('weather', f'{datetime.datetime.now()}', response)
         return JsonResponse(data=response, safe=False)
 
     def post(self, request):
@@ -69,4 +73,5 @@ class WeatherView(View, CommonResponseMixin):
             result['city_info'] = city
             response_data.append(result)
         response_data = self.wrap_json_response(data=response_data)
+        print(response_data)
         return JsonResponse(data=response_data, safe=False, status=200)

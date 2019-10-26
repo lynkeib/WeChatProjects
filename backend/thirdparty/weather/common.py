@@ -16,6 +16,7 @@ class WeatherAPIProxy:
         except Exception as e:
             logger.error("Request juhe weather API timeout. HARequest switch to hefeng weather.")
             data = heweather.HeWeather.get_weather(cityname, timeout)
+        # data = data.to_dict()
         return data
 
 

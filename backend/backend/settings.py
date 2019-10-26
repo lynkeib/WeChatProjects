@@ -47,7 +47,7 @@ INSTALLED_APPS = [
     'authorization',
 
     ## Third-party
-    'django_crontab'
+    # 'django_crontab'
 ]
 
 MIDDLEWARE = [

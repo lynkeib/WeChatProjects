@@ -51,7 +51,7 @@ App({
 
   globalData: {
     userInfo: null,
-    serverUrl: 'http://127.0.0.1:8000',
+    serverUrl: 'https://www.lcycode.com',
     apiVersion: '/api/v1.0',
     appId:"wxd3f77846371232d4",
     auth:{
