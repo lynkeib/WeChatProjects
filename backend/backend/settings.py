@@ -30,7 +30,7 @@ SECRET_KEY = 't+)xftyiciwr8rpgcy3ro141bmnn9jr77uq4&#us@(e#+x=eu4'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 # Application definition
 
@@ -47,7 +47,7 @@ INSTALLED_APPS = [
     'authorization',
 
     ## Third-party
-    # 'django_crontab'
+    'django_crontab'
 ]
 
 MIDDLEWARE = [
