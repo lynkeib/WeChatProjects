@@ -5,6 +5,9 @@ from django.views import View
 import json
 from utils.auth import c2s, already_authorized
 from .models import User
+import logging
+
+logger = logging.getLogger("django")
 
 
 # Create your views here.
@@ -45,7 +48,6 @@ class UserView(View, CommonResponseMixin):
         print(request.session.get('open_id'))
         open_id = request.session.get('open_id')
         user = User.objects.get(open_id=open_id)
-
         received_body = request.body.decode('utf-8')
         received_body = eval(received_body)
         cities = received_body.get('city')
@@ -64,6 +66,7 @@ def __authorize_by_code(request):
     response = {}
     post_data = request.body.decode('utf-8')
     post_data = json.loads(post_data)
+    logger.info(f"user post data, check {post_data}")
     app_id = post_data.get('appId').strip()
     nickname = post_data.get('nickname').strip()
     code = post_data.get('code').strip()

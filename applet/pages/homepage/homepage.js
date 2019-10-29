@@ -53,7 +53,9 @@ Page({
           isLogin:true,
           userInfo: app.globalData.userInfo
         })
+
         console.log('in success', app.globalData.userInfo.nickName)
+        console.log(code)
         wx.request({
           method:"POST",
           url: app.globalData.serverUrl + app.globalData.apiVersion + "/auth/authorize",
