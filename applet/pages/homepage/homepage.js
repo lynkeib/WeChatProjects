@@ -43,6 +43,8 @@ Page({
     var that = this
     wx.login({
       success: function(res){
+        console.log(res)
+        console.log('user info', app.globalData.userInfo)
         var code = res.code
         var appId = app.globalData.appId
         var nickname = app.globalData.userInfo.nickName
@@ -56,6 +58,8 @@ Page({
 
         console.log('in success', app.globalData.userInfo.nickName)
         console.log(code)
+
+
         wx.request({
           method:"POST",
           url: app.globalData.serverUrl + app.globalData.apiVersion + "/auth/authorize",
@@ -89,6 +93,9 @@ Page({
     console.log('global', app.globalData.userInfo)
     this.authorize()
   },
+
+
+
 
   onNavigatorTap:function(event){
     var that = this
