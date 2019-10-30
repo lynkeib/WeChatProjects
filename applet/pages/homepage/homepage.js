@@ -95,8 +95,6 @@ Page({
   },
 
 
-
-
   onNavigatorTap:function(event){
     var that = this
     var promise = authUtil.getStatus(app)
