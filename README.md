@@ -10,4 +10,4 @@
   + Javascript
 
 + Deployed Platform
- + AWS EC2
+  + AWS EC2
