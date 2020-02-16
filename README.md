@@ -8,3 +8,6 @@
  + Frondend:
   + HTML/CSS
   + Javascript
+
++ Deployed Platform
+ + AWS EC2
