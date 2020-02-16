@@ -13,7 +13,7 @@
 + Deployed Platform
   + AWS EC2
 
-+ Highlight
++ Highlights
   + APIs management
   + Django self-designed middlewares
   + cron jobs, cache and logger components usage 
