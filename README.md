@@ -5,7 +5,7 @@
   + Server: Nginx
   + Framework: Django
  
- + Frondend:
++ Frondend:
   + HTML/CSS
   + Javascript
 
