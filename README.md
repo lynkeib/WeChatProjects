@@ -26,7 +26,11 @@
   <p align="center">
   <img src="img/login.jpg" width="40%"/>
 </p>
-  * Application Selection Page: User can select what applications they want to include. Selected application will display in this page.
-  * <p align="center">
-  <img src="img/Application Seletion copy.jpg" width="40%"/>
+  * Application Selection Page: User can select what applications they want to include. Selected applications will display in this page.
+  <p align="center">
+  <img src="img/Application Seletion.jpg" width="40%"/>
+</p>
+  * Index page: Favorite cities, stocks and signs will be displayed in this page.
+  <p align="center">
+  <img src="img/index page.jpg" width="40%"/>
 </p>
