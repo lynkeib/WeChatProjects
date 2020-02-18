@@ -24,5 +24,5 @@
 + Demmo
   * Log in page: in this page, you can login or logout your account, the index page will display different information according to different users. Plus, you can add your favorite city (for weather), stocks and signs. 
   <p align="center">
-  <img src="img/login.jpg"/>
+  <img src="img/login.jpg" width="40%"/>
 </p>
