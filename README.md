@@ -24,5 +24,5 @@
 + Demmo
   * Log in page: in this page, you can login or logout your account, the index page will display different information according to different users. Plus, you can add your favorite city (for weather), stocks and signs. 
   <p align="center">
-  <img src="https://github.com/waldyr/Sublime-Installer/blob/master/sublime_text.png?raw=true" alt="Sublime's custom image"/>
+  <img src="img/login.jpg"/>
 </p>
