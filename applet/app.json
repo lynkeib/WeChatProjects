@@ -21,19 +21,19 @@
   "tabBar": {
     "list": [{
       "pagePath": "pages/index/index",
-      "text": "首页",
+      "text": "Homepage",
       "iconPath": "resources/icons/tabbar/page-index.png",
       "selectedIconPath": "resources/icons/tabbar/page-index-color.png"
     },
     {
       "pagePath": "pages/menu/menu",
-      "text": "应用",
+      "text": "Applications",
       "iconPath": "resources/icons/tabbar/page-application.png",
       "selectedIconPath": "resources/icons/tabbar/page-application-color.png"
     },
     {
       "pagePath": "pages/homepage/homepage",
-      "text": "个人",
+      "text": "Personal",
       "iconPath": "resources/icons/tabbar/page-personal.png",
       "selectedIconPath": "resources/icons/tabbar/page-personal-color.png"
     }]

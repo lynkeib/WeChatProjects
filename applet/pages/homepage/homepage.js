@@ -73,7 +73,7 @@ Page({
           },
           success:function(res){
               wx.showToast({
-                title:"授权成功"
+                title:"Auth success"
               })
               app.setAuthStatus(true)
               console.log('user data:', app.globalData)
@@ -111,7 +111,7 @@ Page({
         })
         app.setAuthStatus(false)
         wx.showToast({
-          title: '请先授权登录'
+          title: 'Please login first'
         })
       }
       if (status){
@@ -194,9 +194,9 @@ Page({
       header:header,
       success:function(res){
         if (res.data.data.is_authorized==1){
-          console.log("登录状态")
+          console.log("Log status")
         }else{
-          console.log('Session过期，未登录状态')
+          console.log('Session expired')
         }
       }
     })

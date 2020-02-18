@@ -84,7 +84,7 @@ Page({
       success:function(res){
         console.log(res)
         wx.showModal({
-          title: '保存成功',
+          title: 'Saved',
           content: '',
         })
       }
@@ -160,7 +160,7 @@ Page({
     console.log('delete index: ' + index)
     var personalData = this.data.personal
     wx.showModal({
-      content: "确认删除此项吗？",
+      content: "Are you sure?",
       showCancel: true,
       success: function(res) {
         console.log(res)

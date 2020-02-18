@@ -71,7 +71,7 @@ Page({
         console.log(res)
         if (isShowModal) {
           wx.showToast({
-            title: '保存成功',
+            title: 'Saved',
           })
         }
       }
@@ -83,7 +83,7 @@ Page({
     var index = e.currentTarget.dataset.index
     console.log('delete index: ' + index)
     wx.showModal({
-      content: "确认删除此项吗？",
+      content: "Are you sure?",
       showCancel: true,
       success: function (res) {
         console.log(res)

@@ -68,7 +68,7 @@ Page({
     var header = {}
     header.Cookie = cookie
     wx.showLoading({
-      title: '加载中',
+      title: 'Loading',
     })
     wx.request({
       url: app.globalData.serverUrl + app.globalData.apiVersion + '/service/weather',
@@ -122,7 +122,7 @@ Page({
           isAuthorized: false
         })
         wx.showToast({
-          title: '清先授权登录',
+          title: 'Please login first',
         })}
     })
   // }

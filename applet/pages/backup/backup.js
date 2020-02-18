@@ -48,7 +48,7 @@ Page({
   // 长按确认函数
   longTapConfirm: function (e) {
     var that = this
-    var confirmList = ["删除备份"]
+    var confirmList = ["Delete"]
     wx.showActionSheet({
       itemList: confirmList,
       success: function (res) {
@@ -72,7 +72,7 @@ Page({
   // 长按删除待上传图片
   longTapConfirmWaiting:function(e){
     var that = this
-    var confirmList = ["删除"]
+    var confirmList = ["Delete"]
     wx.showActionSheet({
       itemList: confirmList,
       success: function(res){
@@ -116,7 +116,7 @@ Page({
       })
     }
     wx.showToast({
-      title: '上传成功',
+      title: 'Uploded',
     })
     this.setData({
       needUploadFiles: []
@@ -153,7 +153,7 @@ Page({
       success: function (res) {
         console.log(res)
         wx.showToast({
-          title: '删除成功',
+          title: 'Deleted',
         })
       }
     })

@@ -19,7 +19,7 @@
 <!--pages/menu/menu.wxml-->
 <view class="page">
   <view class="page__hd">
-    <view class="weui-panel__hd">应用列表</view>
+    <view class="weui-panel__hd">Applications</view>
   </view>
   <view class="page__bd">
     <view class="weui-grids">

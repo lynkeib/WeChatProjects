@@ -76,7 +76,7 @@ Page({
               menuData = that.fillIconData(menuData)
             } else {
               wx.showToast({
-                title: '用户暂无应用，请点击添加！',
+                title: 'There is no application right now, please add one！',
                 icon: 'none'
               })
             }
@@ -150,7 +150,7 @@ Page({
     if (!app.getAuthStatus) {
       console.log(app.globalData)
       wx.showToast({
-        title: '请先登录',
+        title: 'Please login first',
         icon: 'none'
       })
       return
@@ -162,7 +162,7 @@ Page({
 
   onPullDownRefresh: function () {
     wx.showLoading({
-      title: '加载中',
+      title: 'Loading',
     })
     console.log('Updating Menu')
     this.updateMenuData()
