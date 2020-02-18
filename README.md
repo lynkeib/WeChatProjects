@@ -23,4 +23,4 @@
 
 + Demmo
   * Log in page
-    <img src="img/login">
+    <img src="./img/login.jpg">
